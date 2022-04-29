@@ -21,7 +21,7 @@ series = [
 				date: "May 28 2022",
 				track: "Suzuka",
 				url: "https://supergt.net/races/index/2022/Round3/",
-				image: "https://www.motoracing-japan.com/circuit/image/ap.gif"
+				image: "images/super-gt-suzuka.jpg"
 			},
 			{
 				round: "Round 4",
@@ -35,7 +35,7 @@ series = [
 				date: "Aug 27 2022",
 				track: "Suzuka",
 				url: "https://supergt.net/races/index/2022/Round5/",
-				image: "https://www.motoracing-japan.com/circuit/image/suzuka.gif"
+				image: "images/super-gt-suzuka.jpg"
 			},
 			{
 				round: "Round 6",
