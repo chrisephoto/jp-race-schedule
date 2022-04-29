@@ -15,6 +15,9 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
+	let unique = [...new Set(series)];
+	console.log(unique);
+	
 	for (let i = 0; i < series.length; i++) {
 		const main = document.getElementById("main");
 		const section = document.createElement("section");
