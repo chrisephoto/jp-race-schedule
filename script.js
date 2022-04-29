@@ -1,3 +1,9 @@
+// to do
+// auto scroll sliders to first non-epired event
+// prevent scrolling left past 0
+// sort events
+// all events slider
+
 // variables
 timeDifMin = 999999999999999999999999;
 
@@ -32,7 +38,9 @@ function loadData() {
 
     for (let j = 0; j < dataset.length; j++) {
       if (j == 0) {
-        main.appendChild(document.createElement("h5"));
+        const button = document.createElement("a").appendChild(document.createTextNode("left"));
+        div.appendChild(button);
+        button.className = "button-left";
       }
 
       if (dataset[j].series == seriesList[i]) {
@@ -70,17 +78,21 @@ function loadData() {
 
       }
 
-      if (j == dataset.length) {
-        main.appendChild(document.createElement("h6"));
+      if (j == dataset.length - 1) {
+        button = document.createElement("button").appendChild(document.createTextNode("right"));
+        div.appendChild(button);
+        button.className = "button-right";
       }
 
       //determine next event
       proposedDate = Date.parse(dataset[j].date);
       currentDate = Date.parse(Date());
       timeDif = proposedDate - currentDate;
-      if (timeDif < timeDifMin) {
-        timeDifMin = timeDif;
-        nextEvent = j;
+      if (timeDif >= 0) {
+        if (timeDif < timeDifMin) {
+          timeDifMin = timeDif;
+          nextEvent = j;
+        }
       }
     }
   }
