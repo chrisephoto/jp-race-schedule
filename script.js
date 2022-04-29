@@ -15,7 +15,7 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
-	let unique = [...new Set(series)];
+	let unique = [...new Set(dataset)];
 	console.log(unique);
 	
 	for (let i = 0; i < series.length; i++) {
