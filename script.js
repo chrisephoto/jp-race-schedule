@@ -15,41 +15,44 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
-	let unique = [...new Set(dataset)];
+
+	const seriesList = [...new Set(dataset.map(item => item.series))];
 	console.log(unique);
+
 	
-	for (let i = 0; i < series.length; i++) {
+	for (let i = 0; i < seriesList.length; i++) {
 		const main = document.getElementById("main");
 		const section = document.createElement("section");
 		const h2 = document.createElement("h2");
-		const text = document.createTextNode(series[i].title);
+		const text = document.createTextNode(seriesList[i]);
 		const div = document.createElement("div");
 
 		main.appendChild(section);
 		section.appendChild(h2);
 		h2.appendChild(text);
 		section.appendChild(div);
-		div.id = "slider-" + i;
+		div.id = "slider-" + [i];
 
-		for (let j = 0; j < series[i].event.length; j++) {
+		for (let j = 0; j < dataset.length; j++) {
 			if (j == 0) {
 				//first
 			}
 			
+			if (dataset[j].series == seriesList[i]) {
 			const anchor = document.createElement("a");
 			anchor.className = "card";
-			anchor.href = series[i].event[j].url;
+			anchor.href = dataset[j].url;
 			anchor.target = "_blank";
 			const img = document.createElement("img");
-			img.src = series[i].event[j].image;
+			img.src = dataset[j].image;
 			const textdiv = document.createElement("div");
 			const round = document.createElement("p");
 			const date = document.createElement("p");
 			const track = document.createElement("p");
 			
-			const roundtext = document.createTextNode(series[i].event[j].round);
-			const datetext = document.createTextNode(series[i].event[j].date);
-			const tracktext = document.createTextNode(series[i].event[j].track);
+			const roundtext = document.createTextNode(dataset[j].round);
+			const datetext = document.createTextNode(dataset[j].date);
+			const tracktext = document.createTextNode(dataset[j].track);
 			
 			div.appendChild(anchor);
 			anchor.appendChild(img);
@@ -64,35 +67,35 @@ function loadData() {
 			date.className = "text-size-m";
 			date.appendChild(datetext);
 			
-			if (j == series[i].event.length) {
+			if (Date.parse(dataset[j].date) < Date.parse(Date())) {
+					anchor.classList.add("unavailable");
+			}
+				
+			}
+			
+			if (j == dataset.length) {
 				//last
 			}
 
 			//determine next event
-			proposedDate = Date.parse(series[i].event[j].date);
+			proposedDate = Date.parse(dataset[j].date);
 			currentDate = Date.parse(Date());
 			timeDif = proposedDate - currentDate;
-			if (timeDif > 0) {
 				if (timeDif < timeDifMin) {
 					timeDifMin = timeDif;
-					nextSeries = i;
 					nextEvent = j;
 				}
-			}
-			else {
-					anchor.classList.add("unavailable");
-			}
 		}
 	}
 
 	document.getElementById("carousel-header").innerHTML =
-		series[nextSeries].title;
+		dataset[nextEvent].series;
 	document.getElementById("carousel-copy").innerHTML =
-		series[nextSeries].event[nextEvent].track;
+		dataset[nextEvent].track;
 	document.getElementById("carousel-button").href =
-		series[nextSeries].event[nextEvent].url;
+		dataset[nextEvent].url;
 	document.getElementById("carousel-image").src =
-		series[nextSeries].event[nextEvent].image;
+		dataset[nextEvent].image;
 }
 
 function scrollSlider(id, direction) {
