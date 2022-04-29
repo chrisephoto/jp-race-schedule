@@ -21,8 +21,7 @@ a {
 }
 
 button,
-input,
-.button {
+input {
 	font-family: var(--font-family-body);
 	font-weight: bold;
 }
@@ -185,6 +184,7 @@ section .card img {
 	border: none;
 	border-radius: var(--border-radius);
 	display: inline-block;
+	font-weight: bold;
 	padding: 1em 2em;
 	text-decoration: none;
 }
