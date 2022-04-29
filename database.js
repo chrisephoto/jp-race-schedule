@@ -1,7 +1,4 @@
-series = [
-	{
-		title: "Super GT",
-		event: [
+dataset = [
 			{
 				series: "Super GT",
 				round: "Round 1",
@@ -65,12 +62,7 @@ series = [
 				track: "Motegi",
 				url: "https://supergt.net/races/index/2022/Round8/",
 				image: "https://www.motoracing-japan.com/circuit/image/motegi.gif"
-			}
-		]
-	},
-	{
-		title: "Super Taikyu",
-		event: [
+			},
 			{
 				series: "Super Taikyu",
 				round: "Round 1",
@@ -126,12 +118,7 @@ series = [
 				track: "Suzuka",
 				url: "https://google.com/",
 				image: "https://www.motoracing-japan.com/circuit/image/suzuka.gif"
-			}
-		]
-	},
-	{
-		title: "Super Formula",
-		event: [
+			},
 			{
 				series: "Super Formula",
 				round: "Round 1",
@@ -188,6 +175,4 @@ series = [
 				url: "https://google.com/",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			}
-		]
-	}
 ];
