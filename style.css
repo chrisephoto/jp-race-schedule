@@ -23,14 +23,14 @@ section {
 section > div {
 	box-sizing: border-box;
 	display: flex;
-	gap: 2.5rem;
-	height: 15rem;
+	gap: 1.5rem;
+	height: 12rem;
 }
 
 section .card {
 	aspect-ratio: 1.5;
 	background: black;
-	border-radius: 30px;
+	border-radius: 5px;
 	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
 	color: white;
 	//overflow: hidden;
