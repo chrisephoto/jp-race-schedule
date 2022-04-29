@@ -29,6 +29,10 @@ function loadData() {
 		div.id = "slider-" + i;
 
 		for (let j = 0; j < series[i].event.length; j++) {
+			if (j == 0) {
+				//first
+			}
+			
 			const anchor = document.createElement("a");
 			anchor.className = "card";
 			anchor.href = series[i].event[j].url;
@@ -56,6 +60,10 @@ function loadData() {
 			textdiv.appendChild(date);
 			date.className = "text-size-m";
 			date.appendChild(datetext);
+			
+			if (j == series[i].event.length) {
+				//last
+			}
 
 			//determine next event
 			proposedDate = Date.parse(series[i].event[j].date);
@@ -84,11 +92,23 @@ function loadData() {
 		series[nextSeries].event[nextEvent].image;
 }
 
-function scrollSlider(id) {
+function scrollSlider(id, direction) {
+	d = document.getElementById(id);
 	vw = window.innerWidth;
 	base = parseFloat(getComputedStyle(document.documentElement).fontSize);
-	num = Math.floor(vw / base / 21.2);
-	scrollOffset = num * 21.2;
-	current = document.getElementById(id).style.left
-	document.getElementById(id).style.left = "calc(" + current + " - " + scrollOffset + ")";
+	num = Math.floor(vw / (base * 21.2));
+	scrollOffset = num * base * 21.2;
+	current = parseInt(getComputedStyle(d).left);
+	if (direction == "r") {
+		if (d.getBoundingClientRect().right > vw) {
+			scrollTo = current - scrollOffset;
+			d.style.left = scrollTo + "px";
+		}
+	}
+	if (direction == "l") {
+		if (d.getBoundingClientRect().left < 0) {
+			scrollTo = current + scrollOffset;
+			d.style.left = scrollTo + "px";
+		}
+	}
 }
