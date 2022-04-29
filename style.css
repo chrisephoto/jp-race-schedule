@@ -62,8 +62,9 @@ body {
 }
 
 footer {
-	padding: calc(var(--gap)/2);
+	padding: var(--gap);
 	text-align: center;
+	width: 100%;
 }
 
 main {
