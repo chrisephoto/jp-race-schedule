@@ -1,20 +1,60 @@
-@import"https://fonts.googleapis.com/icon?family=Material+Icons";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
-
+/* variables */
 :root {
 	--border-radius: 5px;
-	--accent-color: #d82914;
-	--background-color: #141414;
-	--text-color: #ffffff;
+	--box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.3);
+	--color-accent: #d82914;
+	--color-background: #141414;
+	--color-text: #ffffff;
+	--font-family-body: 'Poppins', sans-serif;
+	--font-family-heading: 'Poppins', sans-serif;
 }
 
-* {
-	font-family: 'Poppins', sans-serif;
+/* typography */
+a {
+	color: var(--accent-color);
+	font-family: var(--font-family-body);
 }
 
+button,
+input {
+	font-family: var(--font-family-body);
+	font-weight: bold;
+}
+
+caption,
+label,
+li,
+p,
+span,
+td,
+th {
+	color: var(--color-text);
+	font-family: var(--font-family-body);
+}
+
+figcaption {
+	color: var(--color-text);
+	font-family: var(--font-family-body);
+	font-weight: bold;
+	text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text);
+	font-family: var(--font-family-heading);
+}
+
+/* style */
 body {
-	background: var(--background-color);
+	background: var(--color-background);
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -24,7 +64,7 @@ main {
 }
 
 section {
-	color: var(--text-color);
+	color: var(--color-text);
 	padding: 1.5rem 2.5rem;
 }
 
@@ -37,10 +77,10 @@ section > div {
 
 section .card {
 	aspect-ratio: 1.78;
-	background: var(--background-color);
+	background: var(--color-background);
 	border-radius: var(--border-radius);
-	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
-	color: var(--text-color);
+	box-shadow: var(--box-shadow);
+	color: var(--color-text);
 	/*overflow: hidden;*/
 	position: relative;
 	transition: transform 0.15s;
@@ -122,13 +162,11 @@ section .card img {
 }
 
 .carousel-text h1 {
-	color: var(--text-color);
 	margin: 0;
 	text-shadow: 0 1px 4px rgb(0 0 0 / 40%), 0 2px 8px rgb(0 0 0 / 20%), 0 0 16px rgb(0 0 0 / 30%);
 }
 
 .carousel-text p {
-	color: var(--text-color);
 	margin: 0.3rem 0 1rem 0;
 	text-shadow: 0 1px 4px rgb(0 0 0 / 40%), 0 2px 8px rgb(0 0 0 / 20%), 0 0 16px rgb(0 0 0 / 30%);
 }
@@ -144,15 +182,16 @@ section .card img {
 }
 
 .button-1 {
-	background: var(--accent-color);
-	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
-	color: var(--text-color);
+	background: var(--color-accent);
+	box-shadow: var(--box-shadow);
+	color: var(--color-text);
+	font-weight: bold;
 }
 
 .button-2 {
 	background: transparent;
-	box-shadow: 0 0 0 2px var(--accent-color) inset;
-	color: var(--accent-color);
+	box-shadow: 0 0 0 2px var(--color-accent) inset;
+	color: var(--color-accent);
 }
 
 .button-2 {
