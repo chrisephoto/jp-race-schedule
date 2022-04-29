@@ -12,7 +12,7 @@ body {
 }
 
 main {
-	margin-top: calc(100% - 17rem);
+	margin-top: calc(100vh - 17rem);
 }
 
 section {
