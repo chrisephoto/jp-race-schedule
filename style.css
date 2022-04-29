@@ -1,1 +1,223 @@
+@import"https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
 
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: #363135;
+	margin: 0 0 0 3.5rem;
+	overflow-x: hidden;
+}
+
+main {
+	margin-top: 50vh;
+}
+
+nav {
+	align-content: space-between;
+	background: #d82914;
+	bottom: 0;
+	box-shadow: 0 0 16px rgba(0,0,0,0.2);
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	transition: width 0.2s;
+	width: 3.5rem;
+	z-index: 50;
+}
+
+nav:hover {
+	box-shadow: 0 0 32px rgba(0,0,0,0.15);
+	transition: width 0.2s 1s;
+	width: 12rem;
+}
+
+nav li {
+	align-items: center;
+	background: rgba(0,0,0,0.0);
+	display: flex;
+	margin: 0.5rem 0;
+	padding: 0;
+	transition: background 0.15s;
+	width: 100%;
+}
+
+nav li.active {
+	box-shadow: 3px 0 0 white inset;
+}
+
+nav li:hover {
+	background: rgba(0,0,0,0.2);
+}
+
+nav li .material-icons {
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+
+nav li .labels {
+	font-size: 1rem;
+	margin: 0;
+	padding: 1rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	color: white;
+	padding: 1.5rem 2.5rem;
+}
+
+section > div {
+	box-sizing: border-box;
+	display: flex;
+	gap: 2.5rem;
+	height: 15rem;
+}
+
+section .card {
+	aspect-ratio: 1.5;
+	background: black;
+	border-radius: 30px;
+	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
+	color: white;
+	//overflow: hidden;
+	position: relative;
+	transition: transform 0.15s;
+}
+
+section .card:hover {
+	transform: scale(1.1);
+}
+
+section .card div {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+section .card div p {
+	line-height: 1.617em;
+	margin: 0;
+}
+
+section .card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: contrast(0.8) brightness(0.5);
+}
+
+#carousel {
+	box-sizing: border-box;
+	height: 70vh;
+	overflow: hidden;
+	left: 3.5rem;
+	position: fixed;
+	right: 0;
+	user-select: none;
+	top: 0;
+	z-index: -50;
+}
+
+.carousel-slide {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.carousel-slide img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.7;
+	width: 100%;
+	-webkit-mask-image: linear-gradient(to top,
+    hsla(0, 0%, 0%, 0) 0%,
+		hsla(0, 0%, 0%, 0.2) 15%,
+    hsla(0, 0%, 0%, 0.8) 45%,
+    hsl(0, 0%, 0%) 60%
+  );
+}
+
+.carousel-text {
+	left: 50%;
+	padding: 2rem;
+	position: absolute;
+	text-align: center;
+	top: calc(50% - 5vh);
+	transform: translate(-50%,-50%);
+	z-index: 20;
+}
+
+.carousel-text a {
+	margin: 0;
+}
+
+.carousel-text h1 {
+	color: #fff;
+	margin: 0;
+	text-shadow: 0 1px 4px rgb(0 0 0 / 40%), 0 2px 8px rgb(0 0 0 / 20%), 0 0 16px rgb(0 0 0 / 30%);
+}
+
+.carousel-text p {
+	color: #fff;
+	margin: 0.3rem 0 1rem 0;
+	text-shadow: 0 1px 4px rgb(0 0 0 / 40%), 0 2px 8px rgb(0 0 0 / 20%), 0 0 16px rgb(0 0 0 / 30%);
+}
+
+.button {
+	background: #d82914;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
+	color: white;
+	display: inline-block;
+	padding: 1.25em 3.75em;
+	text-decoration: none;
+}
+
+.text-size-3xl {
+  font-size: 2.23rem;
+}
+
+.text-size-2xl {
+	font-size: 1.9rem;
+}
+
+.text-size-xl {
+	font-size: 1.618rem;
+}
+
+.text-size-l {
+	font-size: 1.378rem;
+}
+
+.text-size-m {
+	font-size: 1.174rem;
+}
+
+.text-size-s {
+	font-size: 1rem;
+}
+
+.text-size-xs {
+	font-size: 0.852rem;
+}
