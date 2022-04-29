@@ -212,10 +212,10 @@ section .card img {
 	border-radius: 1000px;
 	color: var(--color-text);
 	height: 3rem;
-	left: -6rem;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	transition: var(--transition);
 	width: 3rem;
 	z-index: 100;
 }
@@ -224,8 +224,16 @@ section .card img {
 	left: -6rem;
 }
 
+.button-left.visible {
+	left: 0rem;
+}
+
 .button-right {
 	right: -6rem;
+}
+
+.button-right.visible {
+	right: 0rem;
 }
 
 .unavailable {
