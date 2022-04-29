@@ -40,7 +40,7 @@ section .card {
 	background: var(--background-color);
 	border-radius: var(--border-radius);
 	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
-	color: wvar(--text-color);
+	color: var(--text-color);
 	/*overflow: hidden;*/
 	position: relative;
 	transition: transform 0.15s;
