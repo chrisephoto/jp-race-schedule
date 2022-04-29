@@ -17,19 +17,19 @@ dataset = [
 			},
 			{
 				series: "Super GT",
-				round: "Round 3",
-				date: "May 28 2022",
-				track: "Suzuka",
-				url: "https://supergt.net/races/index/2022/Round3/",
-				image: "images/super-gt-suzuka.jpg"
-			},
-			{
-				series: "Super GT",
 				round: "Round 4",
 				date: "Aug 6 2022",
 				track: "Fuji",
 				url: "https://supergt.net/races/index/2022/Round4/",
 				image: "images/super-gt-fuji.jpg"
+			},
+			{
+				series: "Super GT",
+				round: "Round 3",
+				date: "May 28 2022",
+				track: "Suzuka",
+				url: "https://supergt.net/races/index/2022/Round3/",
+				image: "images/super-gt-suzuka.jpg"
 			},
 			{
 				series: "Super GT",
