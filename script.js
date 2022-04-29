@@ -43,11 +43,11 @@ function loadData() {
 
     for (let j = 0; j < eventList[i].length; j++) {
       if (j == 0) {
-        const button = document.createElement("a")
+        const button = document.createElement("a");
         button.className = "button-left";
-        button.setAttribute("onclick","scrollSlider("slider-0","l"));
+        button.setAttribute("onclick","scrollSlider('slider-0','l'));
         const buttontext = document.createTextNode("left");
-        div.appendChild(button)
+        div.appendChild(button);
       }
 
       if (eventList[i][j].series == seriesList[i]) {
@@ -86,11 +86,11 @@ function loadData() {
       }
 
       if (j == eventList[i].length - 1) {
-        const button = document.createElement("a")
+        const button = document.createElement("a");
         button.className = "button-right";
-        button.setAttribute("onclick","scrollSlider("slider-0","r"));
+        button.setAttribute("onclick","scrollSlider('slider-0','r'));
         const buttontext = document.createTextNode("right");
-        div.appendChild(button)
+        div.appendChild(button);
       }
 
       //determine next event
