@@ -83,3 +83,12 @@ function loadData() {
 	document.getElementById("carousel-image").src =
 		series[nextSeries].event[nextEvent].image;
 }
+
+function scrollSlider(id) {
+	vw = window.innerWidth;
+	base = parseFloat(getComputedStyle(document.documentElement).fontSize);
+	num = Math.floor(vw / base / 21.2);
+	scrollOffset = num * 21.2;
+	console.log(scrollOffset);
+	document.getElementById(id).style.left += scrollOffset;
+}
