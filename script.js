@@ -32,7 +32,7 @@ function loadData() {
 
     for (let j = 0; j < dataset.length; j++) {
       if (j == 0) {
-        //first
+        main.appendChild(document.createElement("h5"));
       }
 
       if (dataset[j].series == seriesList[i]) {
@@ -71,7 +71,7 @@ function loadData() {
       }
 
       if (j == dataset.length) {
-        //last
+        main.appendChild(document.createElement("h6"));
       }
 
       //determine next event
