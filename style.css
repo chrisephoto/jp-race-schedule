@@ -193,7 +193,6 @@ section .card img {
 	background: var(--color-accent);
 	box-shadow: var(--box-shadow);
 	color: var(--color-text);
-	font-weight: bold;
 }
 
 .button-2 {
