@@ -7,14 +7,14 @@ series = [
 				date: "Apr 16 2022",
 				track: "Okayama",
 				url: "https://supergt.net/races/index/2022/Round1/",
-				image: "https://www.motoracing-japan.com/circuit/image/ti.gif"
+				image: "images/super-gt-okayama.jpg"
 			},
 			{
 				round: "Round 2",
 				date: "May 3 2022",
 				track: "Fuji",
 				url: "https://supergt.net/races/index/2022/Round2/",
-				image: "https://www.motoracing-japan.com/circuit/image/fisco.gif"
+				image: "images/super-gt-fuji.jpg"
 			},
 			{
 				round: "Round 3",
@@ -28,7 +28,7 @@ series = [
 				date: "Aug 6 2022",
 				track: "Fuji",
 				url: "https://supergt.net/races/index/2022/Round4/",
-				image: "https://www.motoracing-japan.com/circuit/image/fisco.gif"
+				image: "images/super-gt-fuji.jpg"
 			},
 			{
 				round: "Round 5",
