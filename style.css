@@ -149,9 +149,9 @@ section .card img {
 	color: var(--text-color);
 }
 
-.button-1 {
+.button-2 {
 	background: transparent;
-	box-shadow: 0 0 2px var(--accent-color) inset;
+	box-shadow: 0 0 0 2px var(--accent-color) inset;
 	color: var(--accent-color);
 }
 
