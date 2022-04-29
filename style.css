@@ -80,18 +80,18 @@ section > div {
 	box-sizing: border-box;
 	display: flex;
 	gap: var(--gap);
-	height: 12rem;
 }
 
 section .card {
-	aspect-ratio: 1.78;
 	background: var(--color-background);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	color: var(--color-text);
-	/*overflow: hidden;*/
+	height: 10.8rem;
+	overflow: hidden;
 	position: relative;
 	transition: var(--transition);
+	width: 19.2rem;
 }
 
 section .card:hover {
