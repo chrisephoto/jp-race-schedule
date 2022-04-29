@@ -16,7 +16,7 @@
 
 /* typography */
 a {
-	color: var(--accent-color);
+	color: var(--color-accent);
 	font-family: var(--font-family-body);
 }
 
