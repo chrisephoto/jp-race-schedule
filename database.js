@@ -3,6 +3,7 @@ series = [
 		title: "Super GT",
 		event: [
 			{
+				series: "Super GT",
 				round: "Round 1",
 				date: "Apr 16 2022",
 				track: "Okayama",
@@ -10,6 +11,7 @@ series = [
 				image: "images/super-gt-okayama.jpg"
 			},
 			{
+				series: "Super GT",
 				round: "Round 2",
 				date: "May 3 2022",
 				track: "Fuji",
@@ -17,6 +19,7 @@ series = [
 				image: "images/super-gt-fuji.jpg"
 			},
 			{
+				series: "Super GT",
 				round: "Round 3",
 				date: "May 28 2022",
 				track: "Suzuka",
@@ -24,6 +27,7 @@ series = [
 				image: "images/super-gt-suzuka.jpg"
 			},
 			{
+				series: "Super GT",
 				round: "Round 4",
 				date: "Aug 6 2022",
 				track: "Fuji",
@@ -31,6 +35,7 @@ series = [
 				image: "images/super-gt-fuji.jpg"
 			},
 			{
+				series: "Super GT",
 				round: "Round 5",
 				date: "Aug 27 2022",
 				track: "Suzuka",
@@ -38,6 +43,7 @@ series = [
 				image: "images/super-gt-suzuka.jpg"
 			},
 			{
+				series: "Super GT",
 				round: "Round 6",
 				date: "Sep 17 2022",
 				track: "Sugo",
@@ -45,6 +51,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/sugo.gif"
 			},
 			{
+				series: "Super GT",
 				round: "Round 7",
 				date: "Oct 1 2022",
 				track: "Autopolis",
@@ -52,6 +59,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/ap.gif"
 			},
 			{
+				series: "Super GT",
 				round: "Round 8",
 				date: "Nov 5 2022",
 				track: "Motegi",
@@ -64,6 +72,7 @@ series = [
 		title: "Super Taikyu",
 		event: [
 			{
+				series: "Super Taikyu",
 				round: "Round 1",
 				date: "March 19 2022",
 				track: "Suzuka",
@@ -71,6 +80,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/suzuka.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 2",
 				date: "June 3 2022",
 				track: "Fuji",
@@ -78,6 +88,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/fisco.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 3",
 				date: "July 9 2022",
 				track: "Sugo",
@@ -85,6 +96,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/sugo.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 4",
 				date: "July 30 2022",
 				track: "Autopolis",
@@ -92,6 +104,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/ap.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 5",
 				date: "September 3 2022",
 				track: "Motegi",
@@ -99,6 +112,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/motegi.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 6",
 				date: "October 15 2022",
 				track: "Okayama",
@@ -106,6 +120,7 @@ series = [
 				image: "https://www.motoracing-japan.com/circuit/image/ti.gif"
 			},
 			{
+				series: "Super Taikyu",
 				round: "Round 7",
 				date: "November 26 2022",
 				track: "Suzuka",
@@ -118,6 +133,7 @@ series = [
 		title: "Super Formula",
 		event: [
 			{
+				series: "Super Formula",
 				round: "Round 1",
 				date: "March 19 2022",
 				track: "Suzuka",
@@ -125,6 +141,7 @@ series = [
 				image: "https://cdn-1.motorsport.com/images/amp/27vJ5Xm0/s1000/32-orc-rookie-corolla-h2-conce.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 2",
 				date: "June 3 2022",
 				track: "Fuji",
@@ -132,6 +149,7 @@ series = [
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 3",
 				date: "July 9 2022",
 				track: "Sugo",
@@ -139,6 +157,7 @@ series = [
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 4",
 				date: "July 30 2022",
 				track: "Autopolis",
@@ -146,6 +165,7 @@ series = [
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 5",
 				date: "September 3 2022",
 				track: "Motegi",
@@ -153,6 +173,7 @@ series = [
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 6",
 				date: "October 15 2022",
 				track: "Okayama",
@@ -160,6 +181,7 @@ series = [
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
+				series: "Super Formula",
 				round: "Round 7",
 				date: "November 26 2022",
 				track: "Suzuka",
