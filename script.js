@@ -21,11 +21,10 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
-  const seriesList = [...new Set(dataset.map(item => item.series))];
+  const seriesList = [...new Set(dataset.map(item => item.series))].sort();
   
   for (let i = 0; i < seriesList.length; i++) {
-    res = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (a.date > b.date) ? 1 : -1);
-    console.log(res);
+    eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
   }
 
   for (let i = 0; i < seriesList.length; i++) {
@@ -41,28 +40,28 @@ function loadData() {
     section.appendChild(div);
     div.id = "slider-" + [i];
 
-    for (let j = 0; j < dataset.length; j++) {
+    for (let j = 0; j < eventList[i].length; j++) {
       if (j == 0) {
         const button = document.createElement("a").appendChild(document.createTextNode("left"));
         div.appendChild(button);
         button.className = "button-left";
       }
 
-      if (dataset[j].series == seriesList[i]) {
+      if (eventList[i][j].series == seriesList[i]) {
         const anchor = document.createElement("a");
         anchor.className = "card";
-        anchor.href = dataset[j].url;
+        anchor.href = eventList[i][j].url;
         anchor.target = "_blank";
         const img = document.createElement("img");
-        img.src = dataset[j].image;
+        img.src = eventList[i][j].image;
         const textdiv = document.createElement("div");
         const round = document.createElement("p");
         const date = document.createElement("p");
         const track = document.createElement("p");
 
-        const roundtext = document.createTextNode(dataset[j].round);
-        const datetext = document.createTextNode(dataset[j].date);
-        const tracktext = document.createTextNode(dataset[j].track);
+        const roundtext = document.createTextNode(eventList[i][j].round);
+        const datetext = document.createTextNode(eventList[i][j].date);
+        const tracktext = document.createTextNode(eventList[i][j].track);
 
         div.appendChild(anchor);
         anchor.appendChild(img);
@@ -77,13 +76,13 @@ function loadData() {
         date.className = "text-size-m";
         date.appendChild(datetext);
 
-        if (Date.parse(dataset[j].date) < Date.parse(Date())) {
+        if (Date.parse(eventList[i][j].date) < Date.parse(Date())) {
           anchor.classList.add("unavailable");
         }
 
       }
 
-      if (j == dataset.length - 1) {
+      if (j == eventList[i].length - 1) {
         button = document.createElement("button").appendChild(document.createTextNode("right"));
         div.appendChild(button);
         button.className = "button-right";
