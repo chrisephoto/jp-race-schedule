@@ -80,6 +80,7 @@ section > div {
 	box-sizing: border-box;
 	display: flex;
 	gap: var(--gap);
+	width: fit-content;
 }
 
 section .card {
