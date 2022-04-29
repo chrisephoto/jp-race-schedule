@@ -45,7 +45,7 @@ function loadData() {
       if (j == 0) {
         const button = document.createElement("a")
         button.className = "button-left";
-        button.onclick = scrollSlider("slider" + i,"l")
+        button.setAttribute("onclick","scrollSlider("slider-0","l");")
         const buttontext = document.createTextNode("left");
         div.appendChild(button)
       }
@@ -88,7 +88,7 @@ function loadData() {
       if (j == eventList[i].length - 1) {
         const button = document.createElement("a")
         button.className = "button-right";
-        button.onclick = scrollSlider("slider" + i,"r")
+        button.setAttribute("onclick","scrollSlider("slider-0","r");")
         const buttontext = document.createTextNode("right");
         div.appendChild(button)
       }
