@@ -12,7 +12,7 @@ body {
 }
 
 main {
-	margin-top: 50vh;
+	margin-top: 60vh;
 }
 
 section {
@@ -68,7 +68,7 @@ section .card img {
 
 #carousel {
 	box-sizing: border-box;
-	height: 70vh;
+	height: 80vh;
 	overflow: hidden;
 	left: 0rem;
 	position: fixed;
