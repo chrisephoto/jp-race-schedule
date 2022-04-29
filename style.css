@@ -28,7 +28,7 @@ section > div {
 }
 
 section .card {
-	aspect-ratio: 1.5;
+	aspect-ratio: 1.78;
 	background: black;
 	border-radius: 5px;
 	box-shadow: 0 6px 24px 0 rgb(0 0 0 / 15%);
