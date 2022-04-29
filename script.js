@@ -22,6 +22,11 @@ function carouselOpacity(sp) {
 
 function loadData() {
   const seriesList = [...new Set(dataset.map(item => item.series))];
+  
+  for (let i = 0; i < seriesList.length; i++) {
+    res = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (a.date > b.date) ? 1 : -1);
+    console.log(res);
+  }
 
   for (let i = 0; i < seriesList.length; i++) {
     const main = document.getElementById("main");
