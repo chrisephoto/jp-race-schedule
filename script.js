@@ -26,6 +26,7 @@ function loadData() {
 		section.appendChild(h2);
 		h2.appendChild(text);
 		section.appendChild(div);
+		div.id = "slider-" + i;
 
 		for (let j = 0; j < series[i].event.length; j++) {
 			const anchor = document.createElement("a");
