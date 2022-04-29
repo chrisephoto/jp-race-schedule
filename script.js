@@ -30,6 +30,9 @@ function loadData() {
 		for (let j = 0; j < series[i].event.length; j++) {
 			const anchor = document.createElement("a");
 			anchor.className = "card";
+			if (Date.parse(series[i].event[j].date) < Date.parse(Date())) {
+				anchor.classList.add("unavilable");
+			}
 			anchor.href = series[i].event[j].url;
 			anchor.target = "_blank";
 			const img = document.createElement("img");
