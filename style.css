@@ -137,7 +137,7 @@ section .card img {
 }
 
 .unavailable {
-	filter: brightness(1.0) contrast(0.5);
+	filter: contrast(0.7) brightness(0.4);
 }
 
 .text-size-3xl {
