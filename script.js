@@ -22,6 +22,7 @@ function carouselOpacity(sp) {
 
 function loadData() {
   const seriesList = [...new Set(dataset.map(item => item.series))].sort();
+  const eventList = []
   
   for (let i = 0; i < seriesList.length; i++) {
     eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
