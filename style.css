@@ -21,7 +21,8 @@ a {
 }
 
 button,
-input {
+input,
+.button {
 	font-family: var(--font-family-body);
 	font-weight: bold;
 }
