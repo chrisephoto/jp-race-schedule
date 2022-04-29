@@ -89,6 +89,6 @@ function scrollSlider(id) {
 	base = parseFloat(getComputedStyle(document.documentElement).fontSize);
 	num = Math.floor(vw / base / 21.2);
 	scrollOffset = num * 21.2;
-	console.log(scrollOffset);
-	document.getElementById(id).style.left += scrollOffset;
+	current = document.getElementById(id).style.left
+	document.getElementById(id).style.left = "calc(" + current + " - " + scrollOffset + ")";
 }
