@@ -70,7 +70,7 @@ section .card img {
 	box-sizing: border-box;
 	height: 70vh;
 	overflow: hidden;
-	left: 3.5rem;
+	left: 0rem;
 	position: fixed;
 	right: 0;
 	user-select: none;
@@ -92,10 +92,10 @@ section .card img {
 	opacity: 0.7;
 	width: 100%;
 	-webkit-mask-image: linear-gradient(to top,
-    hsla(0, 0%, 0%, 0) 0%,
-		hsla(0, 0%, 0%, 0.2) 15%,
-    hsla(0, 0%, 0%, 0.8) 45%,
-    hsl(0, 0%, 0%) 60%
+		hsla(0, 0%, 0%, 0) 0%,
+		hsla(0, 0%, 0%, 0.2) 5%,
+		hsla(0, 0%, 0%, 0.8) 15%,
+		hsla(0, 0%, 0%, 1.0) 25%
   );
 }
 
