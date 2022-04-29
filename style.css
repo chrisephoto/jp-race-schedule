@@ -80,6 +80,9 @@ section > div {
 	box-sizing: border-box;
 	display: flex;
 	gap: var(--gap);
+	left: 0;
+	position: relative;
+	transition: var(--transition);
 	width: fit-content;
 }
 
