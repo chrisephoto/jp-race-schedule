@@ -206,6 +206,28 @@ section .card img {
 	color: var(--color-accent);
 }
 
+.button-left,
+.button-right {
+	background: var(--color-accent);
+	border-radius: 1000px;
+	color: var(--color-text);
+	height: 3rem;
+	left: -6rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 3rem;
+	z-index: 100;
+}
+
+.button-left {
+	left: -6rem;
+}
+
+.button-right {
+	right: -6rem;
+}
+
 .unavailable {
 	filter: contrast(0.7) brightness(0.4);
 }
