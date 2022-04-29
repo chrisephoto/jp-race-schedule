@@ -15,64 +15,6 @@ main {
 	margin-top: 50vh;
 }
 
-nav {
-	align-content: space-between;
-	background: #d82914;
-	bottom: 0;
-	box-shadow: 0 0 16px rgba(0,0,0,0.2);
-	color: white;
-	display: flex;
-	flex-wrap: wrap;
-	left: 0;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	transition: width 0.2s;
-	width: 3.5rem;
-	z-index: 50;
-}
-
-nav:hover {
-	box-shadow: 0 0 32px rgba(0,0,0,0.15);
-	transition: width 0.2s 1s;
-	width: 12rem;
-}
-
-nav li {
-	align-items: center;
-	background: rgba(0,0,0,0.0);
-	display: flex;
-	margin: 0.5rem 0;
-	padding: 0;
-	transition: background 0.15s;
-	width: 100%;
-}
-
-nav li.active {
-	box-shadow: 3px 0 0 white inset;
-}
-
-nav li:hover {
-	background: rgba(0,0,0,0.2);
-}
-
-nav li .material-icons {
-	font-size: 1.5rem;
-	margin: 0;
-	padding: 0.5rem 1rem;
-}
-
-nav li .labels {
-	font-size: 1rem;
-	margin: 0;
-	padding: 1rem;
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-}
-
 section {
 	color: white;
 	padding: 1.5rem 2.5rem;
@@ -192,6 +134,10 @@ section .card img {
 	display: inline-block;
 	padding: 1.25em 3.75em;
 	text-decoration: none;
+}
+
+.unavailable {
+	filter: brightness(1.0) contrast(0.5);
 }
 
 .text-size-3xl {
