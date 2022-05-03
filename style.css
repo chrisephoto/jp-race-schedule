@@ -161,7 +161,7 @@ main {
 	scroll-snap-align: start;
 	scroll-margin: 2rem;
 	transition: var(--transition);
-	width: 19.2vw;
+	width: calc(20vw - 12rem);
 }
 
 .card:hover {
@@ -216,12 +216,12 @@ main {
 }
 
 .slider-outer {
-	position: relative;
 }
 
 .slider-mid {
 	box-sizing: border-box;
 	overflow-x: scroll;
+	position: relative;
 	scroll-snap-type: x mandatory;
 	width: 100%;
 }
