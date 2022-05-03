@@ -1,4 +1,3 @@
-// to do
 // auto scroll sliders to first non-epired event
 // prevent scrolling left past 0
 // sort events
@@ -6,11 +5,15 @@
 
 // variables
 timeDifMin = 999999999999999999999999;
+const seriesList = [...new Set(dataset.map(item => item.series))].sort();
+const allEvents = dataset.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
+const eventList = []
 
 // listeners
 window.addEventListener("scroll", function() {
   carouselOpacity(window.scrollY);
 });
+window.addEventListener("load", nextEvent);
 window.addEventListener("load", loadData);
 
 // functions
@@ -21,9 +24,6 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
-  const seriesList = [...new Set(dataset.map(item => item.series))].sort();
-  const eventList = []
-  
   for (let i = 0; i < seriesList.length; i++) {
     eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
   }
@@ -34,22 +34,19 @@ function loadData() {
     const h2 = document.createElement("h2");
     const text = document.createTextNode(seriesList[i]);
     const div = document.createElement("div");
-
     main.appendChild(section);
     section.appendChild(h2);
     h2.appendChild(text);
     section.appendChild(div);
     div.id = "slider-" + [i];
-
     for (let j = 0; j < eventList[i].length; j++) {
       if (j == 0) {
         const button = document.createElement("a");
         button.className = "button-left";
-        button.setAttribute("onclick","scrollSlider('slider-0','l')");
+        button.setAttribute("onclick", "scrollSlider('slider-0','l')");
         const buttontext = document.createTextNode("left");
         div.appendChild(button);
       }
-
       if (eventList[i][j].series == seriesList[i]) {
         const anchor = document.createElement("a");
         anchor.className = "card";
@@ -61,11 +58,9 @@ function loadData() {
         const round = document.createElement("p");
         const date = document.createElement("p");
         const track = document.createElement("p");
-
         const roundtext = document.createTextNode(eventList[i][j].round);
         const datetext = document.createTextNode(eventList[i][j].date);
         const tracktext = document.createTextNode(eventList[i][j].track);
-
         div.appendChild(anchor);
         anchor.appendChild(img);
         anchor.appendChild(textdiv);
@@ -78,42 +73,36 @@ function loadData() {
         textdiv.appendChild(date);
         date.className = "text-size-m";
         date.appendChild(datetext);
-
         if (Date.parse(eventList[i][j].date) < Date.parse(Date())) {
           anchor.classList.add("unavailable");
         }
-
       }
-
       if (j == eventList[i].length - 1) {
         const button = document.createElement("a");
         button.className = "button-right";
-        button.setAttribute("onclick","scrollSlider('slider-0','r')");
+        button.setAttribute("onclick", "scrollSlider('slider-0','r')");
         const buttontext = document.createTextNode("right");
         div.appendChild(button);
       }
+    }
+  }
+}
 
-      //determine next event
-      proposedDate = Date.parse(dataset[j].date);
-      currentDate = Date.parse(Date());
-      timeDif = proposedDate - currentDate;
-      if (timeDif >= 0) {
-        if (timeDif < timeDifMin) {
-          timeDifMin = timeDif;
-          nextEvent = j;
-        }
+function nextEvent() {
+  for (let i = 0; i < allEvents.length; i++) {
+    proposedDate = Date.parse(allEvents[i].date);
+    currentDate = Date.parse(Date()); timeDif=proposedDate - currentDate;
+    if (timeDif>= 0) {
+      if (timeDif < timeDifMin) {
+        timeDifMin = timeDif;
+        nextEvent = i;
       }
     }
   }
-
-  document.getElementById("carousel-header").innerHTML =
-    dataset[nextEvent].series;
-  document.getElementById("carousel-copy").innerHTML =
-    dataset[nextEvent].track;
-  document.getElementById("carousel-button").href =
-    dataset[nextEvent].url;
-  document.getElementById("carousel-image").src =
-    dataset[nextEvent].image;
+  document.getElementById("carousel-header").innerHTML = allEvents[nextEvent].series;
+  document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].track;
+  document.getElementById("carousel-button").href = allEvents[nextEvent].url;
+  document.getElementById("carousel-image").src = allEvents[nextEvent].image;
 }
 
 function scrollSlider(id, direction) {
