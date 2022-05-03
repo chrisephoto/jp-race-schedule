@@ -39,9 +39,9 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   console.log(data);
   
   main.appendChild(sliderOuter);
-  sliderOuter.appendChild(sliderMid);
   sliderOuter.appendChild(sliderTitle);
   sliderTitle.appendChild(document.createTextNode("test"))
+  sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
   sliderMid.appendChild(sliderInner);
   sliderMid.id = "slider-";
