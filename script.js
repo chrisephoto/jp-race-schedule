@@ -17,12 +17,6 @@ window.addEventListener("load", nextEvent);
 window.addEventListener("load", loadData);
 
 // functions
-function carouselOpacity(sp) {
-  vh = window.innerHeight;
-  n = 1 - (2 * sp) / vh; //current position in vh
-  document.getElementById("carousel").style.opacity = n;
-}
-
 function nextEvent() {
   for (let i = 0; i < allEvents.length; i++) {
     proposedDate = Date.parse(allEvents[i].date);
@@ -184,4 +178,10 @@ function scrollSlider(id, direction) {
       d.style.left = scrollTo + "px";
     }
   }
+}
+
+function carouselOpacity(sp) {
+  vh = window.innerHeight;
+  n = 1 - (2 * sp) / vh; //current position in vh
+  document.getElementById("carousel").style.opacity = n;
 }
