@@ -236,6 +236,24 @@ section .card img {
 	right: 0rem;
 }
 
+.slider-outer {
+	position: relative;
+}
+
+.slider-mid {
+	box-sizing: border-box;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	width: 100%;
+}
+
+.slider-inner {
+	display: flex;
+	gap: 2rem;
+	padding: 2rem;
+	width: fit-content;
+}
+
 .unavailable {
 	filter: contrast(0.7) brightness(0.4);
 }
