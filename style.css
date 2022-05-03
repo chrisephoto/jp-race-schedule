@@ -71,37 +71,6 @@ main {
 	margin-top: calc(100vh - 20rem);
 }
 
-section {
-	color: var(--color-text);
-	padding: var(--gap);
-}
-
-section > div {
-	box-sizing: border-box;
-	display: flex;
-	gap: var(--gap);
-	left: 0;
-	position: relative;
-	transition: var(--transition);
-	width: fit-content;
-}
-
-section .card {
-	background: var(--color-background);
-	border-radius: var(--border-radius);
-	box-shadow: var(--box-shadow);
-	color: var(--color-text);
-	height: 10.8rem;
-	overflow: hidden;
-	position: relative;
-	transition: var(--transition);
-	width: 19.2rem;
-}
-
-section .card:hover {
-	transform: scale(1.05);
-}
-
 section .card div {
 	align-items: center;
 	bottom: 0;
@@ -118,13 +87,6 @@ section .card div p {
 	line-height: 1.617em;
 	margin: 0;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 8px rgba(0,0,0,1.0);
-}
-
-section .card img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	filter: contrast(0.9) brightness(0.8);
 }
 
 #carousel {
@@ -206,12 +168,40 @@ section .card img {
 	color: var(--color-accent);
 }
 
-.button-left,
-.button-right {
+.card {
+	align-items: center;
+	aspect-ratio: 1.77777777777778;
+	background: var(--color-background);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	color: var(--color-text);
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	scroll-snap-align: start;
+	scroll-margin: 2rem;
+	transition: var(--transition);
+	width: 19.2vw;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: contrast(0.9) brightness(0.8);
+}
+
+.nav-left,
+.nav-right {
+	aspect-ratio: 1;
 	background: var(--color-accent);
 	border-radius: 1000px;
+	box-shadow: var(--box-shadow);
 	color: var(--color-text);
-	height: 3rem;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -220,20 +210,13 @@ section .card img {
 	z-index: 100;
 }
 
-.button-left {
-	left: -6rem;
+.nav-right {
+	right: 1rem;
 }
 
-.button-left.visible {
-	left: 0rem;
-}
-
-.button-right {
-	right: -6rem;
-}
-
-.button-right.visible {
-	right: 0rem;
+.nav-left {
+	left: 1rem;
+	transition: 0.2s;
 }
 
 .slider-outer {
