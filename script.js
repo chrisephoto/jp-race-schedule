@@ -8,6 +8,9 @@ timeDifMin = 999999999999999999999999;
 const seriesList = [...new Set(dataset.map(item => item.series))].sort();
 const allEvents = dataset.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
 const eventList = []
+for (let i = 0; i < seriesList.length; i++) {
+  eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
+}
 
 // listeners
 window.addEventListener("scroll", function() {
@@ -24,10 +27,65 @@ function carouselOpacity(sp) {
 }
 
 function loadData() {
-  for (let i = 0; i < seriesList.length; i++) {
-    eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
-  }
-
+    const main = document.getElementById("main");
+    const section = document.createElement("section");
+    const h2 = document.createElement("h2");
+    const text = document.createTextNode("Following");
+    const div = document.createElement("div");
+    main.appendChild(section);
+    section.appendChild(h2);
+    h2.appendChild(text);
+    section.appendChild(div);
+    div.id = "slider-" + [i];
+    for (let j = 0; j < allEvents.length; j++) {
+      if (j == 0) {
+        const button = document.createElement("a");
+        button.className = "button-left";
+        button.setAttribute("onclick", "scrollSlider('slider-0','l')");
+        const buttontext = document.createTextNode("left");
+        div.appendChild(button);
+      }
+      if (true) { //update to check for favorites only
+        const anchor = document.createElement("a");
+        anchor.className = "card";
+        anchor.href = allEvents[j].url;
+        anchor.target = "_blank";
+        const img = document.createElement("img");
+        img.src = allEvents[j].image;
+        const textdiv = document.createElement("div");
+        const round = document.createElement("p");
+        const date = document.createElement("p");
+        const track = document.createElement("p");
+        const roundtext = document.createTextNode(allEvents[j].round);
+        const datetext = document.createTextNode(allEvents[j].date);
+        const tracktext = document.createTextNode(allEvents[j].track);
+        div.appendChild(anchor);
+        anchor.appendChild(img);
+        anchor.appendChild(textdiv);
+        textdiv.appendChild(round);
+        round.className = "text-size-xl";
+        round.appendChild(roundtext);
+        textdiv.appendChild(track);
+        track.className = "text-size-l";
+        track.appendChild(tracktext);
+        textdiv.appendChild(date);
+        date.className = "text-size-m";
+        date.appendChild(datetext);
+        if (Date.parse(allEvents[j].date) < Date.parse(Date())) {
+          anchor.classList.add("unavailable");
+        }
+      }
+      if (j == allEvents.length - 1) {
+        const button = document.createElement("a");
+        button.className = "button-right";
+        button.setAttribute("onclick", "scrollSlider('slider-0','r')");
+        const buttontext = document.createTextNode("right");
+        div.appendChild(button);
+      }
+    }
+  
+  
+  
   for (let i = 0; i < seriesList.length; i++) {
     const main = document.getElementById("main");
     const section = document.createElement("section");
