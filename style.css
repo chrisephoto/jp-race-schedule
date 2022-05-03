@@ -157,6 +157,7 @@ main {
 	box-shadow: var(--box-shadow);
 	color: var(--color-text);
 	overflow: hidden;
+	position: relative;
 	scroll-snap-align: start;
 	scroll-margin: 2rem;
 	transition: var(--transition);
@@ -172,6 +173,15 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: absolute;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+}
+
+.card > div p {
+  margin: 0;
 }
 
 .card > img {
