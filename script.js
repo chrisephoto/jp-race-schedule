@@ -22,7 +22,8 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   //opt 1 - hide/show expired events
   
   const main = document.getElementById("main");
-  const sliderOuter = document.createElement("section");
+  const section = document.createElement("section");
+  const sliderOuter = document.createElement("div");
   sliderOuter.className = "slider-outer";
   const sliderTitle = document.createElement("h2");
   const sliderMid = document.createElement("div");
@@ -32,15 +33,16 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   sliderInner.className = "slider-inner";
   const buttonLeft = document.createElement("a");
   buttonLeft.className = "nav-left";
-  buttonLeft.setAttribute("onclick", "scrollSlider('slider-0','l')");
+  buttonLeft.setAttribute("onclick", "scrollSlider('temp','l')");
   sliderInner.appendChild(buttonLeft);
   
   console.log("Elements created");
   console.log(data);
   
-  main.appendChild(sliderOuter);
-  sliderOuter.appendChild(sliderTitle);
+  main.appendChild(section);
+  section.appendChild(sliderTitle);
   sliderTitle.appendChild(document.createTextNode(data[0].series))
+  section.appendChild(sliderOuter);
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
   sliderMid.appendChild(sliderInner);
