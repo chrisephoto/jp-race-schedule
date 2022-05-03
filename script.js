@@ -36,7 +36,7 @@ function loadData() {
     section.appendChild(h2);
     h2.appendChild(text);
     section.appendChild(div);
-    div.id = "slider-" + [i];
+    div.id = "slider-all";
     for (let j = 0; j < allEvents.length; j++) {
       if (j == 0) {
         const button = document.createElement("a");
