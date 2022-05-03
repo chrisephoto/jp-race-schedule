@@ -31,7 +31,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   const sliderInner = document.createElement("div");
   sliderInner.className = "slider-inner";
   const buttonLeft = document.createElement("a");
-  buttonLeft.className = "button-left";
+  buttonLeft.className = "nav-left";
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-0','l')");
   sliderInner.appendChild(buttonLeft);
   
@@ -40,7 +40,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   
   main.appendChild(sliderOuter);
   sliderOuter.appendChild(sliderTitle);
-  sliderTitle.appendChild(document.createTextNode("test"))
+  sliderTitle.appendChild(document.createTextNode(data[0].series))
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
   sliderMid.appendChild(sliderInner);
@@ -82,7 +82,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
     }
   }
   const buttonRight = document.createElement("a");
-  buttonRight.className = "button-right";
+  buttonRight.className = "nav-right";
   buttonRight.setAttribute("onclick", "scrollSlider('slider-0','r')");
   sliderInner.appendChild(buttonRight);
 }
