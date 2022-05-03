@@ -216,6 +216,10 @@ main {
 	width: 100%;
 }
 
+.slider-mid::-webkit-scrollbar { 
+    display: none; 
+}
+
 .slider-inner {
 	display: flex;
 	gap: 2rem;
