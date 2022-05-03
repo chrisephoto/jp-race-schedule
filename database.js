@@ -124,7 +124,7 @@ dataset = [
 				round: "Round 1",
 				date: "April 9 2022",
 				track: "Fuji",
-				url: "https://superformula.net/sf2/en/race2022/round1-2/",
+				url: "https://superformula.net/sf2/race2022/round1",
 				image: "https://cdn-1.motorsport.com/images/amp/27vJ5Xm0/s1000/32-orc-rookie-corolla-h2-conce.jpg"
 			},
 			{
@@ -132,7 +132,7 @@ dataset = [
 				round: "Round 2",
 				date: "April 10 2022",
 				track: "Fuji",
-				url: "https://superformula.net/sf2/en/race2022/round1-2/",
+				url: "https://superformula.net/sf2/race2022/round1",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -140,7 +140,7 @@ dataset = [
 				round: "Round 3",
 				date: "April 23 2022",
 				track: "Suzuka",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022/round3",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -148,7 +148,7 @@ dataset = [
 				round: "Round 4",
 				date: "May 21 2022",
 				track: "Autopolis",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022/round4",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -156,7 +156,7 @@ dataset = [
 				round: "Round 5",
 				date: "June 18 2022",
 				track: "Sugo",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -164,7 +164,7 @@ dataset = [
 				round: "Round 6",
 				date: "July 16 2022",
 				track: "Fuji",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -172,7 +172,7 @@ dataset = [
 				round: "Round 7",
 				date: "August 20 2022",
 				track: "Motegi",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -180,7 +180,7 @@ dataset = [
 				round: "Round 8",
 				date: "August 21 2022",
 				track: "Motegi",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -188,7 +188,7 @@ dataset = [
 				round: "Round 9",
 				date: "October 29 2022",
 				track: "Suzuka",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			},
 			{
@@ -196,7 +196,7 @@ dataset = [
 				round: "Round 10",
 				date: "October 30 2022",
 				track: "Suzuka",
-				url: "https://google.com/",
+				url: "https://superformula.net/sf2/race2022",
 				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
 			}
 ];
