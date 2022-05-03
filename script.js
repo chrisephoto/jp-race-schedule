@@ -24,6 +24,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   const main = document.getElementById("main");
   const sliderOuter = document.createElement("section");
   sliderOuter.className = "slider-outer";
+  const sliderTitle = document.createElement("h2").appendChild(document.createTextNode("test"));
   const sliderMid = document.createElement("div");
   sliderMid.className = "slider-mid";
   sliderMid.id = "slider-" + data[0].series;
@@ -36,6 +37,13 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   
   console.log("Elements created");
   console.log(data);
+  
+  main.appendChild(sliderOuter);
+  sliderOuter.appendChild(sliderMid);
+  sliderOuter.appendChild(sliderTitle);
+  sliderMid.appendChild(sliderInner);
+  sliderMid.appendChild(sliderInner);
+  sliderMid.id = "slider-";
   
   for (let j = 0; j < data.length; j++) {
     const anchor = document.createElement("a");
