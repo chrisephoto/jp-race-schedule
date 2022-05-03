@@ -50,7 +50,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
     const roundtext = document.createTextNode(data[j].round);
     const datetext = document.createTextNode(data[j].date);
     const tracktext = document.createTextNode(data[j].track);
-    div.appendChild(anchor);
+    sliderInner.appendChild(anchor);
     anchor.appendChild(img);
     textdiv.appendChild(series);
     series.className = "text-size-xl";
