@@ -34,6 +34,9 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-0','l')");
   sliderInner.appendChild(buttonLeft);
   
+  console.log("Elements created");
+  console.log(data);
+  
   for (let j = 0; j < data.length; j++) {
     const anchor = document.createElement("a");
     anchor.className = "card";
