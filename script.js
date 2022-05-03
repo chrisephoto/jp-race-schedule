@@ -1,4 +1,3 @@
-// auto scroll sliders to first non-epired event
 // prevent scrolling left past 0
 // sort events
 // all events slider
@@ -13,9 +12,7 @@ for (let i = 0; i < seriesList.length; i++) {
 }
 
 // listeners
-window.addEventListener("scroll", function() {
-  carouselOpacity(window.scrollY);
-});
+window.addEventListener("scroll", carouselOpacity(window.scrollY));
 window.addEventListener("load", nextEvent);
 window.addEventListener("load", loadData);
 
@@ -24,6 +21,23 @@ function carouselOpacity(sp) {
   vh = window.innerHeight;
   n = 1 - (2 * sp) / vh; //current position in vh
   document.getElementById("carousel").style.opacity = n;
+}
+
+function nextEvent() {
+  for (let i = 0; i < allEvents.length; i++) {
+    proposedDate = Date.parse(allEvents[i].date);
+    currentDate = Date.parse(Date()); timeDif=proposedDate - currentDate;
+    if (timeDif>= 0) {
+      if (timeDif < timeDifMin) {
+        timeDifMin = timeDif;
+        nextEvent = i;
+      }
+    }
+  }
+  document.getElementById("carousel-header").innerHTML = allEvents[nextEvent].series;
+  document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].track;
+  document.getElementById("carousel-button").href = allEvents[nextEvent].url;
+  document.getElementById("carousel-image").src = allEvents[nextEvent].image;
 }
 
 function loadData() {
@@ -53,14 +67,19 @@ function loadData() {
         const img = document.createElement("img");
         img.src = allEvents[j].image;
         const textdiv = document.createElement("div");
+        const series = document.createElement("p");
         const round = document.createElement("p");
         const date = document.createElement("p");
         const track = document.createElement("p");
+        const seriestext = document.createTextNode(allEvents[j].series);
         const roundtext = document.createTextNode(allEvents[j].round);
         const datetext = document.createTextNode(allEvents[j].date);
         const tracktext = document.createTextNode(allEvents[j].track);
         div.appendChild(anchor);
         anchor.appendChild(img);
+        textdiv.appendChild(series);
+        series.className = "text-size-xl";
+        series.appendChild(seriestext);
         anchor.appendChild(textdiv);
         textdiv.appendChild(round);
         round.className = "text-size-xl";
@@ -113,20 +132,15 @@ function loadData() {
         const img = document.createElement("img");
         img.src = eventList[i][j].image;
         const textdiv = document.createElement("div");
-        const series = document.createElement("p");
         const round = document.createElement("p");
         const date = document.createElement("p");
         const track = document.createElement("p");
-        const seriestext = document.createTextNode(eventList[i][j].series);
         const roundtext = document.createTextNode(eventList[i][j].round);
         const datetext = document.createTextNode(eventList[i][j].date);
         const tracktext = document.createTextNode(eventList[i][j].track);
         div.appendChild(anchor);
         anchor.appendChild(img);
         anchor.appendChild(textdiv);
-        textdiv.appendChild(series);
-        series.className = "text-size-xl";
-        series.appendChild(seriestext);
         textdiv.appendChild(round);
         round.className = "text-size-xl";
         round.appendChild(roundtext);
@@ -149,23 +163,6 @@ function loadData() {
       }
     }
   }
-}
-
-function nextEvent() {
-  for (let i = 0; i < allEvents.length; i++) {
-    proposedDate = Date.parse(allEvents[i].date);
-    currentDate = Date.parse(Date()); timeDif=proposedDate - currentDate;
-    if (timeDif>= 0) {
-      if (timeDif < timeDifMin) {
-        timeDifMin = timeDif;
-        nextEvent = i;
-      }
-    }
-  }
-  document.getElementById("carousel-header").innerHTML = allEvents[nextEvent].series;
-  document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].track;
-  document.getElementById("carousel-button").href = allEvents[nextEvent].url;
-  document.getElementById("carousel-image").src = allEvents[nextEvent].image;
 }
 
 function scrollSlider(id, direction) {
