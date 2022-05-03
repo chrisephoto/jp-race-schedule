@@ -12,11 +12,15 @@ for (let i = 0; i < seriesList.length; i++) {
 }
 
 // listeners
-window.addEventListener("scroll", carouselOpacity(window.scrollY));
-window.addEventListener("load", nextEvent);
-window.addEventListener("load", loadData);
+window.addEventListener("load", init());
 
 // functions
+function init() {
+  window.addEventListener("scroll", carouselOpacity(window.scrollY));
+  nextEvent();
+  loadData();
+}
+
 function nextEvent() {
   for (let i = 0; i < allEvents.length; i++) {
     proposedDate = Date.parse(allEvents[i].date);
