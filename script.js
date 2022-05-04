@@ -110,6 +110,11 @@ function createSlider(data, opt1, opt2) {
     } else {
       i = 0;
     }
+    
+    console.log(i);
+    console.log(id);
+    console.log(direction);
+    
     vw = window.innerWidth;
     current = document.getElementById(id).scrollLeft;
     remain = document.getElementById(id).scrollWidth - current;
