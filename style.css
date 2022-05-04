@@ -226,12 +226,12 @@ section > h2 {
 }
 
 .slider-outer {
+	position: relative;
 }
 
 .slider-mid {
 	box-sizing: border-box;
 	overflow-x: scroll;
-	position: relative;
 	scroll-snap-type: x mandatory;
 	width: 100%;
 }
