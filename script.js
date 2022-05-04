@@ -118,6 +118,14 @@ function createSlider(data, opt1, opt2) {
       left: vw * i,
       behavior: "smooth"
     });
+    if (direction == "r") {
+      document.querySelector("#" + id + " .nav-left").classList.add("visible");
+      document.querySelector("#" + id + " .nav-right").classList.remove("visible");
+    }
+    if (direction == "l") {
+      document.querySelector("#" + id + " .nav-left").classList.remove("visible");
+      document.querySelector("#" + id + " .nav-right").classList.add("visible");
+    }
   }
 
   function carouselOpacity(sp) {
