@@ -1,6 +1,4 @@
-// prevent scrolling left past 0
-// sort events
-// all events slider
+// option to hide past events
 
 // variables
 timeDifMin = 999999999999999999999999;
@@ -18,7 +16,7 @@ window.addEventListener("load", loadData);
 // functions
 function loadData() {
   nextEvent();
-  createSlider(allEvents,"Following");
+  createSlider(allEvents,"following");
   for (i = 0; i < seriesList.length; i++) {
     createSlider(eventList[i]);
   }
@@ -26,8 +24,8 @@ function loadData() {
 
 function createSlider(data, opt1, opt2, opt3, opt4) {
   //data - array of events
-  //opt 1 - override heading
-  //opt 2 - 
+  //opt 1 - string = override heading
+  //opt 2 - hide = hide past events
   
   console.log(data);
   console.log(data[0]);
@@ -47,9 +45,6 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   const buttonLeft = document.createElement("a");
   buttonLeft.className = "nav-left";
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','l')");
-  const buttonRight = document.createElement("a");
-  buttonRight.className = "nav-right";
-  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
   
   main.appendChild(section);
   section.appendChild(sliderTitle);
@@ -95,6 +90,10 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
       anchor.classList.add("unavailable");
     }
   }
+  const buttonRight = document.createElement("a");
+  buttonRight.className = "nav-right";
+  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
+  
   sliderInner.appendChild(buttonRight);
 }
 
