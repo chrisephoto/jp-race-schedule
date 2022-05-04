@@ -12,6 +12,7 @@
 	--font-family-heading: 'Poppins', sans-serif;
 	--gap: 2rem;
 	--transition: 0.2s;
+	--card-count: 5; /* how many cards per row */
 }
 
 /* typography */
@@ -161,7 +162,7 @@ main {
 	scroll-snap-align: start;
 	scroll-margin: 2rem;
 	transition: var(--transition);
-	width: calc(20vw - 12rem);
+	width: calc(((100vw - 2rem) / var(--card-count)) - 2rem);
 }
 
 .card:hover {
