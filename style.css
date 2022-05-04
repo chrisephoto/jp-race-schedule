@@ -88,17 +88,12 @@ main {
 	margin-top: calc(100vh - (var(--gap) + 2.828rem + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / var(--aspect-ratio))));
 }
 
-section > h2 {
-	margin: var(--gap) var(--gutter) 0 var(--gutter);
-	text-transform: capitalize;
-}
-
 #carousel {
 	box-sizing: border-box;
 	height: 90vh;
 	overflow: hidden;
 	left: 0;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	user-select: none;
 	top: 0;
@@ -284,6 +279,11 @@ section > h2 {
 .slider-inner:hover .nav-left,
 .slider-inner:hover .nav-right {
 	opacity: 1.0;
+}
+
+.slider-title {
+	margin: var(--gutter) var(--gutter) 0 var(--gutter);
+	text-transform: capitalize;
 }
 
 .unavailable {
