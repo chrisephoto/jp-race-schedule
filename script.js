@@ -111,20 +111,24 @@ function createSlider(data, opt1, opt2) {
       i = 0;
     }
     vw = window.innerWidth;
-    //count = getComputedStyle(document.querySelector(":root")).getPropertyValue('--card-count');
-    //scrollIncrement = vw / count;
+    current = document.getElementById(id).scrollLeft;
+    remain = document.getElementById(id).scrollWidth - current;
     document.getElementById(id).scrollBy({
       top: 0,
       left: vw * i,
       behavior: "smooth"
     });
-    if (direction == "r") {
-      document.querySelector("#" + id + " .nav-left").classList.add("visible");
-      document.querySelector("#" + id + " .nav-right").classList.remove("visible");
-    }
     if (direction == "l") {
-      document.querySelector("#" + id + " .nav-left").classList.remove("visible");
+      if (document.getElementById("slider-following").scrollLeft <= vw) {
+        document.querySelector("#" + id + " .nav-left").classList.remove("visible");
+      }
       document.querySelector("#" + id + " .nav-right").classList.add("visible");
+    }
+    if (direction == "r") {
+      if (document.getElementById("slider-following").scrollLeft <= remain) {
+        document.querySelector("#" + id + " .nav-right").classList.remove("visible");
+      }
+      document.querySelector("#" + id + " .nav-left").classList.add("visible");
     }
   }
 
