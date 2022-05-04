@@ -81,7 +81,21 @@ function createSlider(data, opt1, opt2) {
       const roundtext = document.createTextNode(data[j].round);
       const datetext = document.createTextNode(data[j].date);
       const tracktext = document.createTextNode(data[j].track);
-      sliderInner.appendChild(anchor); anchor.appendChild(img); textdiv.appendChild(series); series.className = "text-size-xl"; series.appendChild(seriestext); anchor.appendChild(textdiv); textdiv.appendChild(round); round.className = "text-size-xl"; round.appendChild(roundtext); textdiv.appendChild(track); track.className = "text-size-l"; track.appendChild(tracktext); textdiv.appendChild(date); date.className = "text-size-m"; date.appendChild(datetext);
+      sliderInner.appendChild(anchor);
+      anchor.appendChild(img);
+      textdiv.appendChild(series);
+      series.className = "text-size-s";
+      series.appendChild(seriestext);
+      anchor.appendChild(textdiv);
+      textdiv.appendChild(round);
+      round.className = "text-size-s";
+      round.appendChild(roundtext);
+      textdiv.appendChild(track);
+      track.className = "text-size-s";
+      track.appendChild(tracktext);
+      textdiv.appendChild(date);
+      date.className = "text-size-s";
+      date.appendChild(datetext);
       }
     }
     sliderInner.appendChild(buttonRight);
