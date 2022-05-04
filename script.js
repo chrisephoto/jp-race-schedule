@@ -11,10 +11,10 @@ for (let i = 0; i < seriesList.length; i++) {
 
 // listeners
 window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("scroll", carouselOpacity(window.scrollY));
 
 // functions
 function init() {
-  window.addEventListener("scroll", carouselOpacity(window.scrollY));
   nextEvent();
   createSlider(allEvents,"following");
   for (i = 0; i < seriesList.length; i++) {
@@ -137,5 +137,7 @@ function carouselOpacity(sp) {
   //n = 1 - (2 * sp) / vh; //current position in vh
   n = 1 - (sp / vh); //current position in vh
   console.log(n)
-  document.getElementById("carousel").style.opacity = n;
+	if (typeof document.getElementById("carousel") !== 'undefined') {
+    document.getElementById("carousel").style.opacity = n;
+  }
 }
