@@ -43,7 +43,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   sliderInner.className = "slider-inner";
   const buttonLeft = document.createElement("a");
   buttonLeft.className = "nav-left";
-  buttonLeft.setAttribute("onclick", "scrollSlider('temp','l')");
+  buttonLeft.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','l')");
   sliderInner.appendChild(buttonLeft);
   
   console.log("Elements created");
@@ -95,7 +95,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   }
   const buttonRight = document.createElement("a");
   buttonRight.className = "nav-right";
-  buttonRight.setAttribute("onclick", "scrollSlider('slider-0','r')");
+  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
   sliderInner.appendChild(buttonRight);
 }
 
