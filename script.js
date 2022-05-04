@@ -30,7 +30,7 @@ function createSlider(data, opt1, opt2) {
   //opt 1 - string = override heading
   //opt 2 - hide = hide past events
 
-  opt1 = (typeof opt1 !== 'undefined') ? opt1 : data[0].series;
+  opt1 = (typeof opt1 !== 'undefined') ? opt1.replace(/\s+/g, "-").toLowerCase() : data[0].series.replace(/\s+/g, "-").toLowerCase();
 
   const main = document.getElementById("main");
   const section = document.createElement("section");
@@ -51,7 +51,7 @@ function createSlider(data, opt1, opt2) {
 
   main.appendChild(section);
   section.appendChild(sliderTitle);
-  sliderTitle.appendChild(document.createTextNode(opt1))
+  sliderTitle.appendChild(document.createTextNode(opt1).replace("-", /\s+/g))
   section.appendChild(sliderOuter);
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
