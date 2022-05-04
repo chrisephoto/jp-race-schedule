@@ -45,6 +45,9 @@ function createSlider(data, opt1, opt2) {
   const buttonLeft = document.createElement("a");
   buttonLeft.className = "nav-left";
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','l')");
+  const buttonRight = document.createElement("a");
+  buttonRight.className = "nav-right";
+  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
 
   main.appendChild(section);
   section.appendChild(sliderTitle);
@@ -81,10 +84,6 @@ function createSlider(data, opt1, opt2) {
       sliderInner.appendChild(anchor); anchor.appendChild(img); textdiv.appendChild(series); series.className = "text-size-xl"; series.appendChild(seriestext); anchor.appendChild(textdiv); textdiv.appendChild(round); round.className = "text-size-xl"; round.appendChild(roundtext); textdiv.appendChild(track); track.className = "text-size-l"; track.appendChild(tracktext); textdiv.appendChild(date); date.className = "text-size-m"; date.appendChild(datetext);
       }
     }
-    const buttonRight = document.createElement("a");
-    buttonRight.className = "nav-right";
-    buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
-
     sliderInner.appendChild(buttonRight);
   }
 
