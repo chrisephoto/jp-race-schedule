@@ -234,13 +234,11 @@ section > h2 {
 
 
 .nav-right {
-	background-image: url("assets/arrow-right.svg");
 	right: -5rem;
 	transition: var(--transition);
 }
 
 .nav-left {
-	background-image: url("assets/arrow-left.svg");
 	left: -5rem;
 	transition: var(--transition);
 }
