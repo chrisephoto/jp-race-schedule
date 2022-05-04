@@ -13,10 +13,17 @@ for (let i = 0; i < seriesList.length; i++) {
 
 // listeners
 // window.addEventListener("scroll", carouselOpacity(window.scrollY));
-window.addEventListener("load", nextEvent);
-//window.addEventListener("load", loadData);
+window.addEventListener("load", loadData);
 
 // functions
+function loadData() {
+  nextEvent();
+  createSlider(allEvents,"Following",[,,]);
+  for (i = 0; i < seriesList.Length; i++) {
+    createSlider(eventList[i],[,,,]);
+  }
+}
+
 function createSlider(data, opt1, opt2, opt3, opt4) {
   //data - array of events
   //opt 1 - override heading
