@@ -119,13 +119,13 @@ function createSlider(data, opt1, opt2) {
       behavior: "smooth"
     });
     if (direction == "l") {
-      if (document.getElementById("slider-following").scrollLeft <= vw) {
+      if (document.getElementById(id).scrollLeft <= vw) {
         document.querySelector("#" + id + " .nav-left").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-right").classList.add("visible");
     }
     if (direction == "r") {
-      if (document.getElementById("slider-following").scrollLeft <= remain) {
+      if (document.getElementById(id).scrollLeft <= remain) {
         document.querySelector("#" + id + " .nav-right").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-left").classList.add("visible");
