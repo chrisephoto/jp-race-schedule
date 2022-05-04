@@ -58,29 +58,27 @@ function createSlider(data, opt1, opt2) {
   for (let j = 0; j < data.length; j++) {
 
     if (Date.parse(data[j].date) < Date.parse(Date()) && opt2 == "hide") {
-
-    } else {
-
+      return;
+    }
+    else {
       const anchor = document.createElement("a");
       anchor.className = "card";
       anchor.href = data[j].url;
       anchor.target = "_blank";
-      if (Date.parse(data[j].date) < Date.parse(Date()) {
+      if (Date.parse(data[j].date) < Date.parse(Date())) {
           anchor.classList.add("unavailable");
-        }
-        const img = document.createElement("img"); img.src = data[j].image;
-        const textdiv = document.createElement("div");
-        const series = document.createElement("p");
-        const round = document.createElement("p");
-        const date = document.createElement("p");
-        const track = document.createElement("p");
-        const seriestext = document.createTextNode(data[j].series);
-        const roundtext = document.createTextNode(data[j].round);
-        const datetext = document.createTextNode(data[j].date);
-        const tracktext = document.createTextNode(data[j].track);
-
-
-        sliderInner.appendChild(anchor); anchor.appendChild(img); textdiv.appendChild(series); series.className = "text-size-xl"; series.appendChild(seriestext); anchor.appendChild(textdiv); textdiv.appendChild(round); round.className = "text-size-xl"; round.appendChild(roundtext); textdiv.appendChild(track); track.className = "text-size-l"; track.appendChild(tracktext); textdiv.appendChild(date); date.className = "text-size-m"; date.appendChild(datetext);
+      }
+      const img = document.createElement("img"); img.src = data[j].image;
+      const textdiv = document.createElement("div");
+      const series = document.createElement("p");
+      const round = document.createElement("p");
+      const date = document.createElement("p");
+      const track = document.createElement("p");
+      const seriestext = document.createTextNode(data[j].series);
+      const roundtext = document.createTextNode(data[j].round);
+      const datetext = document.createTextNode(data[j].date);
+      const tracktext = document.createTextNode(data[j].track);
+      sliderInner.appendChild(anchor); anchor.appendChild(img); textdiv.appendChild(series); series.className = "text-size-xl"; series.appendChild(seriestext); anchor.appendChild(textdiv); textdiv.appendChild(round); round.className = "text-size-xl"; round.appendChild(roundtext); textdiv.appendChild(track); track.className = "text-size-l"; track.appendChild(tracktext); textdiv.appendChild(date); date.className = "text-size-m"; date.appendChild(datetext);
       }
     }
     const buttonRight = document.createElement("a");
