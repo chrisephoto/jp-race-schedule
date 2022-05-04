@@ -85,7 +85,7 @@ header {
 }
 
 main {
-	margin-top: calc(100vh - (var(--gap) + 2.828rem + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / var(--aspect-ratio)));
+	margin-top: calc(100vh - (var(--gap) + 2.828rem + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / var(--aspect-ratio))));
 }
 
 section > h2 {
