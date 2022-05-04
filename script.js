@@ -29,9 +29,10 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   //opt 1 - override heading
   //opt 2 - 
   
-  console.log(opt1);
+  console.log(data);
+  console.log(data[0]);
+  console.log(data[0].series);
   opt1 = (typeof opt1 !== 'undefined') ?  opt1 : data[0].series;
-  console.log(opt1);
   
   const main = document.getElementById("main");
   const section = document.createElement("section");
