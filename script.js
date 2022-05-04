@@ -19,7 +19,10 @@ window.addEventListener("load", nextEvent);
 // functions
 function createSlider(data, opt1, opt2, opt3, opt4) {
   //data - array of events
-  //opt 1 - hide/show expired events
+  //opt 1 - override heading
+  //opt 2 - 
+  
+  opt1 = (typeof typ !== 'undefined') ?  opt1 : data[0].series
   
   const main = document.getElementById("main");
   const section = document.createElement("section");
@@ -28,7 +31,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   const sliderTitle = document.createElement("h2");
   const sliderMid = document.createElement("div");
   sliderMid.className = "slider-mid";
-  sliderMid.id = "slider-" + data[0].series;
+  sliderMid.id = "slider-" + opt1;
   const sliderInner = document.createElement("div");
   sliderInner.className = "slider-inner";
   const buttonLeft = document.createElement("a");
@@ -41,7 +44,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   
   main.appendChild(section);
   section.appendChild(sliderTitle);
-  sliderTitle.appendChild(document.createTextNode(data[0].series))
+  sliderTitle.appendChild(document.createTextNode(opt1))
   section.appendChild(sliderOuter);
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
