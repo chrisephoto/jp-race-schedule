@@ -11,7 +11,7 @@ for (let i = 0; i < seriesList.length; i++) {
 
 // listeners
 window.addEventListener("DOMContentLoaded", init);
-window.addEventListener("scroll", carouselOpacity());
+window.addEventListener("scroll", carouselOpacity);
 
 // functions
 function init() {
