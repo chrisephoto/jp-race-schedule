@@ -83,7 +83,7 @@ main {
 }
 
 section > h2 {
-	margin: 1em var(--gap) 0.5em var(--gap);
+	margin: 1em var(--gap) 0 var(--gap);
 	text-transform: capitalize;
 }
 
@@ -255,7 +255,7 @@ section > h2 {
 .slider-inner {
 	display: flex;
 	gap: var(--gap);
-	padding: 0 var(--gap);
+	padding: 1rem var(--gap);
 	width: fit-content;
 }
 
