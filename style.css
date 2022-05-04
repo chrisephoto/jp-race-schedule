@@ -13,10 +13,14 @@
 	--gap: 0.5rem;
 	--gutter: 5rem;
 	--transition: 0.2s;
-	--card-count: 6; /* how many cards per row */
+	--card-count: 3; /* how many cards per row */
 }
 
 /* typography */
+html {
+    font-size: 12px;
+}
+
 a {
 	color: var(--color-accent);
 	font-family: var(--font-family-body);
@@ -322,4 +326,14 @@ section > h2 {
 .text-size-xs {
 	font-size: 0.841rem;
 	line-height: 1.414;
+}
+
+/* media queries */
+@media only screen and (min-width: 1025px) {
+	:root {
+	  --card-count: 6; /* how many cards per row */
+	}
+  html {
+    font-size: 16px;
+  }
 }
