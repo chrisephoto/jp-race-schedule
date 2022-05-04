@@ -123,6 +123,6 @@ function createSlider(data, opt1, opt2) {
   function carouselOpacity(sp) {
     vh = window.innerHeight;
     //n = 1 - (2 * sp) / vh; //current position in vh
-    n = 1 - (1.3 * sp / vh); //current position in vh
+    n = 1 - (1.4 * sp / vh); //current position in vh
     document.getElementById("carousel").style.opacity = n;
   }
