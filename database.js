@@ -149,7 +149,7 @@ dataset = [
     date: "May 21 2022",
     track: "Autopolis",
     url: "https://superformula.net/sf2/race2022/round4",
-    image: "images/super-gt-autopolis.jpg"
+    image: "images/super-formula-autopolis.jpg"
   },
   {
     series: "Super Formula",
