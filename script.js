@@ -60,8 +60,7 @@ function createSlider(data, opt1, opt2) {
 
   for (let j = 0; j < data.length; j++) {
 
-    if (Date.parse(data[j].date) < Date.parse(Date()) && opt2 == "hide") {}
-    else {
+    if (Date.parse(data[j].date) >= Date.parse(Date()) || opt2 != "hide") {
       const anchor = document.createElement("a");
       anchor.className = "card";
       anchor.href = data[j].url;
