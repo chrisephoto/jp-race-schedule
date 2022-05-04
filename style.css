@@ -83,8 +83,7 @@ main {
 }
 
 section > h2 {
-	margin-bottom: 0.5em;
-	margin-left: var(--gap);
+	margin: 1em var(--gap) 0.5em var(--gap);
 	text-transform: capitalize;
 }
 
