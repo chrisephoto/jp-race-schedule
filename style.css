@@ -335,7 +335,15 @@ main {
 	line-height: 1.414;
 }
 
-/* medium screens */
+
+/* ipad screens */
+@media only screen and (min-width: 768px) {
+	:root {
+		--card-count: 3; /* how many cards per row */
+	}
+}
+
+/* small pc */
 @media only screen and (min-width: 1024px) {
 	:root {
 		--aspect-ratio: 1.77777777777778;
@@ -345,7 +353,7 @@ main {
 	}
 }
 
-/* large  screens */
+/* pc */
 @media only screen and (min-width: 1366px) {
 	:root {
 		--card-count: 6; /* how many cards per row */
