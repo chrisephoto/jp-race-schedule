@@ -37,6 +37,7 @@ function createSlider(data, opt1, opt2) {
   const sliderOuter = document.createElement("div");
   sliderOuter.className = "slider-outer";
   const sliderTitle = document.createElement("h2");
+  sliderTitle.className = "text-size-xl";
   const sliderMid = document.createElement("div");
   sliderMid.className = "slider-mid";
   sliderMid.id = "slider-" + opt1;
