@@ -122,16 +122,19 @@ function createSlider(data, opt1, opt2) {
   function scrollSlider(id, direction) {
     if (direction == "l") {
       i = -1;
+      if (document.getElementById(id).scrollLeft <= vw + 10) {
+        document.querySelector("#" + id + " .nav-left").classList.remove("visible");
+      }
+      document.querySelector("#" + id + " .nav-right").classList.add("visible");
     } else if (direction == "r") {
       i = 1;
+      if (remain <= 2 * vw + 10) {
+        document.querySelector("#" + id + " .nav-right").classList.remove("visible");
+      }
+      document.querySelector("#" + id + " .nav-left").classList.add("visible");
     } else {
       i = 0;
     }
-    
-    console.log(i);
-    console.log(id);
-    console.log(direction);
-    
     vw = window.innerWidth;
     current = document.getElementById(id).scrollLeft;
     remain = document.getElementById(id).scrollWidth - current;
@@ -140,18 +143,6 @@ function createSlider(data, opt1, opt2) {
       left: vw * i,
       behavior: "smooth"
     });
-    if (direction == "l") {
-      if (document.getElementById(id).scrollLeft <= vw + 1) {
-        document.querySelector("#" + id + " .nav-left").classList.remove("visible");
-      }
-      document.querySelector("#" + id + " .nav-right").classList.add("visible");
-    }
-    if (direction == "r") {
-      if (remain <= 2 * vw + 1) {
-        document.querySelector("#" + id + " .nav-right").classList.remove("visible");
-      }
-      document.querySelector("#" + id + " .nav-left").classList.add("visible");
-    }
   }
 
   function carouselOpacity(sp) {
