@@ -46,7 +46,7 @@ function createSlider(data, opt1, opt2) {
   buttonLeft.className = "nav-left";
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','l')");
   const buttonRight = document.createElement("a");
-  buttonRight.className = "nav-right";
+  buttonRight.className = "nav-right visible";
   buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
 
   main.appendChild(section);
