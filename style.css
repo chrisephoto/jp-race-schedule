@@ -74,6 +74,7 @@ main {
 
 section > h2 {
 	margin-left: var(--gap);
+	text-transform: capitalize;
 }
 
 #carousel {
