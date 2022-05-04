@@ -11,7 +11,7 @@ for (let i = 0; i < seriesList.length; i++) {
 
 // listeners
 window.addEventListener("DOMContentLoaded", init);
-window.addEventListener("scroll", carouselOpacity(window.scrollY));
+window.addEventListener("scroll", carouselOpacity("working"));
 
 // functions
 function init() {
@@ -132,7 +132,7 @@ function scrollSlider(id, direction) {
 }
 
 function carouselOpacity(sp) {
-  console.log(window.scrollY);
+  console.log(sp);
   vh = window.innerHeight;
   //n = 1 - (2 * sp) / vh; //current position in vh
   n = 1 - (sp / vh); //current position in vh
