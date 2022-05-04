@@ -141,13 +141,13 @@ function createSlider(data, opt1, opt2) {
       behavior: "smooth"
     });
     if (direction == "l") {
-      if (document.getElementById(id).scrollLeft <= vw - 1) {
+      if (document.getElementById(id).scrollLeft <= vw + 1) {
         document.querySelector("#" + id + " .nav-left").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-right").classList.add("visible");
     }
     if (direction == "r") {
-      if (remain <= 2 * vw - 1) {
+      if (remain <= 2 * vw + 1) {
         document.querySelector("#" + id + " .nav-right").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-left").classList.add("visible");
