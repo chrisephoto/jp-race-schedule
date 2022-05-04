@@ -130,7 +130,7 @@ section > h2 {
 }
 
 .carousel-text a {
-	margin: 0;
+	margin: 2em 0 0 0;
 }
 
 .carousel-text h1 {
@@ -139,7 +139,7 @@ section > h2 {
 }
 
 .carousel-text p {
-	margin: 0.3em 0 1em 0;
+	margin: 0;
 	text-shadow: 0 1px 4px rgb(0 0 0 / 40%), 0 2px 8px rgb(0 0 0 / 20%), 0 0 16px rgb(0 0 0 / 30%);
 }
 
