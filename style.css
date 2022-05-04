@@ -3,6 +3,7 @@
 
 /* variables */
 :root {
+	--aspect-ratio: 0.75;
 	--border-radius: 3px;
 	--box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.3);
 	--color-accent: #d82914;
@@ -88,7 +89,7 @@ header {
 }
 
 main {
-	margin-top: calc(100vh - (var(--gap) + 2.828rem + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / 1.77777777777778)));
+	margin-top: calc(100vh - (var(--gap) + 2.828rem + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / var(--aspect-ratio)));
 }
 
 section > h2 {
@@ -331,9 +332,10 @@ section > h2 {
 /* media queries */
 @media only screen and (min-width: 1025px) {
 	:root {
-	  --card-count: 6; /* how many cards per row */
+		--aspect-ratio: 1.77777777777778;
+		--card-count: 6; /* how many cards per row */
 	}
-  html {
-    font-size: 16px;
-  }
+	html {
+		font-size: 16px;
+	}
 }
