@@ -175,7 +175,7 @@ section > h2 {
 }
 
 .card {
-	aspect-ratio: 1.77777777777778;
+	aspect-ratio: var(--aspect-ratio);
 	background: var(--color-background);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
