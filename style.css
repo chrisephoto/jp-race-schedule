@@ -18,10 +18,6 @@
 }
 
 /* typography */
-html {
-    font-size: 12px;
-}
-
 a {
 	color: var(--color-accent);
 	font-family: var(--font-family-body);
@@ -334,8 +330,5 @@ section > h2 {
 	:root {
 		--aspect-ratio: 1.77777777777778;
 		--card-count: 6; /* how many cards per row */
-	}
-	html {
-		font-size: 16px;
 	}
 }
