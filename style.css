@@ -11,6 +11,7 @@
 	--font-family-body: 'Poppins', sans-serif;
 	--font-family-heading: 'Poppins', sans-serif;
 	--gap: 2rem;
+	--gutter: 5rem;
 	--transition: 0.2s;
 	--card-count: 6; /* how many cards per row */
 }
@@ -57,7 +58,7 @@ h6 {
 
 /* style */
 ::-webkit-scrollbar { 
-    display: none; 
+	display: none; 
 }
 
 body {
@@ -87,7 +88,7 @@ main {
 }
 
 section > h2 {
-	margin: 1em 5rem 0 5rem;
+	margin: 1em var(--gutter) 0 var(--gutter);
 	text-transform: capitalize;
 }
 
@@ -179,9 +180,9 @@ section > h2 {
 	overflow: hidden;
 	position: relative;
 	scroll-snap-align: start;
-	scroll-margin: 5rem;
+	scroll-margin: var(--gutter);
 	transition: var(--transition);
-	width: calc(((100vw - var(--gap)) / var(--card-count)) - var(--gap));
+	width: calc((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count));
 }
 
 .card:hover {
@@ -205,7 +206,7 @@ section > h2 {
 }
 
 .card > img {
-	filter: contrast(0.9) brightness(0.8);
+	filter: contrast(0.85) brightness(0.77);
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
@@ -229,7 +230,7 @@ section > h2 {
 	position: absolute;
 	top: 1rem;
 	transition: var(--transition);
-	width: 3rem;
+	width: calc(var(--gutter) - var(--gap));
 	z-index: 100;
 }
 
@@ -273,7 +274,7 @@ section > h2 {
 .slider-inner {
 	display: flex;
 	gap: var(--gap);
-	padding: 1rem 5rem;
+	padding: 1rem var(--gutter);
 	width: fit-content;
 }
 
