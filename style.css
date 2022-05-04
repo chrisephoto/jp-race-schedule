@@ -84,7 +84,7 @@ header {
 }
 
 main {
-	margin-top: calc(100vh - 17rem);
+	margin-top: calc(100vh - (1.618rem + (2 * var(--gap)) + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--gap))) / var(--card-count)) / 1.77777777777778)));
 }
 
 section > h2 {
@@ -288,29 +288,36 @@ section > h2 {
 }
 
 .text-size-3xl {
-  font-size: 2.23rem;
+	font-size: 2.23rem;
+	line-height: 2.23rem;
 }
 
 .text-size-2xl {
 	font-size: 1.9rem;
+	line-height: 1.9rem;
 }
 
 .text-size-xl {
 	font-size: 1.618rem;
+	line-height: 1.618rem;
 }
 
 .text-size-l {
 	font-size: 1.378rem;
+	line-height: 1.378rem;
 }
 
 .text-size-m {
 	font-size: 1.174rem;
+	line-height: 1.174rem;
 }
 
 .text-size-s {
 	font-size: 1rem;
+	line-height: 1rem;
 }
 
 .text-size-xs {
 	font-size: 0.852rem;
+	line-height: 0.852rem;
 }
