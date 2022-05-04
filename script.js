@@ -19,13 +19,13 @@ window.addEventListener("scroll", function() {
 // functions
 function init() {
   nextEvent();
-  createSlider(allEvents, "following");
+  createSlider(allEvents, "following", "hide");
   for (i = 0; i < seriesList.length; i++) {
     createSlider(eventList[i]);
   }
 }
 
-function createSlider(data, opt1, opt2, opt3, opt4) {
+function createSlider(data, opt1, opt2) {
   //data - array of events
   //opt 1 - string = override heading
   //opt 2 - hide = hide past events
@@ -57,7 +57,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
 
   for (let j = 0; j < data.length; j++) {
 
-    if (Date.parse(data[j].date) < Date.parse(Date()) AND opt2 == "hide") {
+    if (Date.parse(data[j].date) < Date.parse(Date()) && opt2 == "hide") {
 
     } else {
 
