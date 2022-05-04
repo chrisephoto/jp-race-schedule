@@ -136,6 +136,6 @@ function scrollSlider(id, direction) {
 
 function carouselOpacity(sp) {
   vh = window.innerHeight;
-  n = 1 - (2 * sp) / vh; //current position in vh
+  n = 1 - (2 * sp) / vh; //current position in vhtypeof opt1 !== 'undefined'
   document.getElementById("carousel").style.opacity = n;
 }
