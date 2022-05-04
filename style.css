@@ -220,7 +220,7 @@ section > h2 {
 .nav-left,
 .nav-right {
 	align-items: center;
-	background: rgba(0,0,0,0);
+	background: rgba(0,0,0,0.3);
 	bottom: 1rem;
 	color: var(--color-text);
 	cursor: pointer;
@@ -248,7 +248,7 @@ section > h2 {
 
 .nav-left:hover,
 .nav-right:hover {
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.7);
 }
 
 .nav-right.visible {
