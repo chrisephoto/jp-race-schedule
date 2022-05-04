@@ -26,10 +26,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   //data - array of events
   //opt 1 - string = override heading
   //opt 2 - hide = hide past events
-  
-  console.log(data);
-  console.log(data[0]);
-  console.log(data[0].series);
+	
   opt1 = (typeof opt1 !== 'undefined') ?  opt1 : data[0].series;
   
   const main = document.getElementById("main");
@@ -136,6 +133,7 @@ function scrollSlider(id, direction) {
 
 function carouselOpacity(sp) {
   vh = window.innerHeight;
-  n = 1 - (2 * sp) / vh; //current position in vhtypeof opt1 !== 'undefined'
+  //n = 1 - (2 * sp) / vh; //current position in vh
+  //n = 1 - (sp / vh); //current position in vh
   document.getElementById("carousel").style.opacity = n;
 }
