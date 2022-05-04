@@ -73,7 +73,7 @@ footer {
 }
 
 header {
-	color: #ffffff;
+	color: var(--color-text);
 	display: flex;
 	gap: var(--gap);
 	justify-content: flex-end;
