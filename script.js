@@ -19,7 +19,7 @@ window.addEventListener("load", loadData);
 function loadData() {
   nextEvent();
   createSlider(allEvents,"Following",[,,]);
-  for (i = 0; i < seriesList.Length; i++) {
+  for (i = 0; i < seriesList.length; i++) {
     createSlider(eventList[i],[,,,]);
   }
 }
