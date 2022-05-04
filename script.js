@@ -96,8 +96,8 @@ function createSlider(data, opt1, opt2) {
         }
       }
     }
-    document.getElementById("carousel-header").innerHTML = allEvents[nextEvent].series;
-    document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].track;
+    document.getElementById("carousel-header").innerHTML = "Next Event";
+    document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].series + " at " + allEvents[nextEvent].track;
     document.getElementById("carousel-button").href = allEvents[nextEvent].url;
     document.getElementById("carousel-image").src = allEvents[nextEvent].image;
   }
