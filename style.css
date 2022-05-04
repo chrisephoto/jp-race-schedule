@@ -249,6 +249,16 @@ main {
 	background: rgba(0,0,0,0.7);
 }
 
+.nav-left svg,
+.nav-right svg {
+	transition: var(--transition);
+}
+
+.nav-left:hover svg,
+.nav-right:hover svg {
+	transform: scale(1.3);
+}
+
 .nav-right.visible {
 	right: 0;
 }
