@@ -242,6 +242,7 @@ section > h2 {
 .slider-mid {
 	box-sizing: border-box;
 	overflow-x: scroll;
+	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	width: 100%;
 }
