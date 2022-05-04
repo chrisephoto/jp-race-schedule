@@ -125,11 +125,11 @@ function scrollSlider(id, direction) {
 		i = 0;
 	}
 	vw = window.innerWidth;
-  count = getComputedStyle(document.querySelector(":root")).getPropertyValue('--card-count');
-  scrollIncrement = vw / count;
+	//count = getComputedStyle(document.querySelector(":root")).getPropertyValue('--card-count');
+	//scrollIncrement = vw / count;
 	document.getElementById(id).scrollBy({
 		top: 0,
-		left: scrollIncrement * i,
+		left: vw * i,
 		behavior: "smooth"
 	});
 }
