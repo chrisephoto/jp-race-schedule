@@ -11,7 +11,10 @@ for (let i = 0; i < seriesList.length; i++) {
 
 // listeners
 window.addEventListener("DOMContentLoaded", init);
-window.addEventListener("scroll", carouselOpacity);
+window.addEventListener("scroll", function() {
+    carouselOpacity(window.scrollY);
+}, false);
+
 
 // functions
 function init() {
@@ -131,13 +134,12 @@ function scrollSlider(id, direction) {
 	});
 }
 
-function carouselOpacity() {
+function carouselOpacity(sp) {
   console.log("working");
   vh = window.innerHeight;
   //n = 1 - (2 * sp) / vh; //current position in vh
-  //n = 1 - (sp / vh); //current position in vh
-  //console.log(n)
+  n = 1 - (sp / vh); //current position in vh
 	//if (typeof document.getElementById("carousel") !== 'undefined') {
-    //document.getElementById("carousel").style.opacity = n;
+	document.getElementById("carousel").style.opacity = n;
   //}
 }
