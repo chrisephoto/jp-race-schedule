@@ -56,6 +56,10 @@ h6 {
 }
 
 /* style */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 body {
 	background: var(--color-background);
 	margin: 0;
@@ -256,10 +260,6 @@ section > h2 {
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	width: 100%;
-}
-
-.slider-mid::-webkit-scrollbar { 
-    display: none; 
 }
 
 .slider-inner {
