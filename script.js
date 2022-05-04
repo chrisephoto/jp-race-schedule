@@ -22,7 +22,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   //opt 1 - override heading
   //opt 2 - 
   
-  opt1 = (typeof typ !== 'undefined') ?  opt1 : data[0].series
+  opt1 = (typeof opt1 !== 'undefined') ?  opt1 : data[0].series
   
   const main = document.getElementById("main");
   const section = document.createElement("section");
