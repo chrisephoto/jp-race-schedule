@@ -68,6 +68,16 @@ footer {
 	width: 100%;
 }
 
+header {
+	color: #ffffff;
+	display: flex;
+	gap: var(--gap);
+	justify-content: flex-end;
+	padding: var(--gap);
+	position: relative;
+	z-index: 50;
+}
+
 main {
 	margin-top: calc(100vh - 20rem);
 }
