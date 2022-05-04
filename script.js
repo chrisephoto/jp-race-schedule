@@ -18,9 +18,9 @@ window.addEventListener("load", loadData);
 // functions
 function loadData() {
   nextEvent();
-  createSlider(allEvents,"Following",[,,]);
+  createSlider(allEvents,"Following");
   for (i = 0; i < seriesList.length; i++) {
-    createSlider(eventList[i],[,,,]);
+    createSlider(eventList[i]);
   }
 }
 
