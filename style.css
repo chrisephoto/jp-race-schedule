@@ -221,7 +221,7 @@ section > h2 {
 .nav-right {
 	align-items: center;
 	background: rgba(0,0,0,0.3);
-	bottom: 1rem;
+	bottom: 2rem;
 	color: var(--color-text);
 	cursor: pointer;
 	display: flex;
