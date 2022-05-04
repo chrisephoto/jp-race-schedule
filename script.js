@@ -122,27 +122,33 @@ function createSlider(data, opt1, opt2) {
   function scrollSlider(id, direction) {
     if (direction == "l") {
       i = -1;
+    } else if (direction == "r") {
+      i = 1;
+    } else {
+      i = 0;
+    }
+    vw = window.innerWidth;
+    base = parseInt(getComputedStyle(document.querySelector("html")).getPropertyValue('font-size'));
+    gutter = parseInt(getComputedStyle(document.querySelector(":root")).getPropertyValue('--gutter'));
+    scroll = vw - (gutter * base);
+    current = document.getElementById(id).scrollLeft;
+    remain = document.getElementById(id).scrollWidth - current;
+    document.getElementById(id).scrollBy({
+      top: 0,
+      left: scroll * i,
+      behavior: "smooth"
+    });
+    if (direction == "l") {
       if (document.getElementById(id).scrollLeft <= vw + 10) {
         document.querySelector("#" + id + " .nav-left").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-right").classList.add("visible");
     } else if (direction == "r") {
-      i = 1;
       if (remain <= 2 * vw + 10) {
         document.querySelector("#" + id + " .nav-right").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-left").classList.add("visible");
-    } else {
-      i = 0;
     }
-    vw = window.innerWidth;
-    current = document.getElementById(id).scrollLeft;
-    remain = document.getElementById(id).scrollWidth - current;
-    document.getElementById(id).scrollBy({
-      top: 0,
-      left: vw * i,
-      behavior: "smooth"
-    });
   }
 
   function carouselOpacity(sp) {
