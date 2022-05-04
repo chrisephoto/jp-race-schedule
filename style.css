@@ -14,7 +14,7 @@
 	--gap: 0.5rem;
 	--gutter: 5rem;
 	--transition: 0.2s;
-	--card-count: 3; /* how many cards per row */
+	--card-count: 2; /* how many cards per row */
 }
 
 /* typography */
