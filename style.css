@@ -88,7 +88,7 @@ main {
 }
 
 section > h2 {
-	margin: 1em var(--gutter) 0 var(--gutter);
+	margin: var(--gap) var(--gutter) 0 var(--gutter);
 	text-transform: capitalize;
 }
 
@@ -274,7 +274,7 @@ section > h2 {
 .slider-inner {
 	display: flex;
 	gap: var(--gap);
-	padding: 1rem var(--gutter);
+	padding: var(--gap) var(--gutter);
 	width: fit-content;
 }
 
