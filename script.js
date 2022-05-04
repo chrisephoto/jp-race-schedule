@@ -130,7 +130,7 @@ function createSlider(data, opt1, opt2) {
       document.querySelector("#" + id + " .nav-right").classList.add("visible");
     }
     if (direction == "r") {
-      if (document.getElementById(id).scrollLeft <= remain) {
+      if (remain <= vw) {
         document.querySelector("#" + id + " .nav-right").classList.remove("visible");
       }
       document.querySelector("#" + id + " .nav-left").classList.add("visible");
