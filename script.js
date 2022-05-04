@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 // functions
 function init() {
-	window.addEventListener("scroll", carouselOpacity(window.scrollY));
+  window.addEventListener("scroll", carouselOpacity(window.scrollY));
   nextEvent();
   createSlider(allEvents,"following");
   for (i = 0; i < seriesList.length; i++) {
@@ -132,8 +132,10 @@ function scrollSlider(id, direction) {
 }
 
 function carouselOpacity(sp) {
+  console.log(window.scrollY);
   vh = window.innerHeight;
   //n = 1 - (2 * sp) / vh; //current position in vh
   n = 1 - (sp / vh); //current position in vh
+  console.log(n)
   document.getElementById("carousel").style.opacity = n;
 }
