@@ -40,13 +40,15 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   const sliderTitle = document.createElement("h2");
   const sliderMid = document.createElement("div");
   sliderMid.className = "slider-mid";
-  sliderMid.id = opt1;
+  sliderMid.id = "slider-" + opt1;
   const sliderInner = document.createElement("div");
   sliderInner.className = "slider-inner";
   const buttonLeft = document.createElement("a");
   buttonLeft.className = "nav-left";
   buttonLeft.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','l')");
-  sliderInner.appendChild(buttonLeft);
+  const buttonRight = document.createElement("a");
+  buttonRight.className = "nav-right";
+  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
   
   main.appendChild(section);
   section.appendChild(sliderTitle);
@@ -55,7 +57,7 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
   sliderMid.appendChild(sliderInner);
-  sliderMid.id = "slider-";
+  sliderInner.appendChild(buttonLeft);
   
   for (let j = 0; j < data.length; j++) {
     const anchor = document.createElement("a");
@@ -92,9 +94,6 @@ function createSlider(data, opt1, opt2, opt3, opt4) {
       anchor.classList.add("unavailable");
     }
   }
-  const buttonRight = document.createElement("a");
-  buttonRight.className = "nav-right";
-  buttonRight.setAttribute("onclick", "scrollSlider('slider-" + opt1 + "','r')");
   sliderInner.appendChild(buttonRight);
 }
 
