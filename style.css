@@ -87,7 +87,7 @@ main {
 }
 
 section > h2 {
-	margin: 1em var(--gap) 0 var(--gap);
+	margin: 1em 5rem 0 5rem;
 	text-transform: capitalize;
 }
 
@@ -179,7 +179,7 @@ section > h2 {
 	overflow: hidden;
 	position: relative;
 	scroll-snap-align: start;
-	scroll-margin: var(--gap);
+	scroll-margin: 5rem;
 	transition: var(--transition);
 	width: calc(((100vw - var(--gap)) / var(--card-count)) - var(--gap));
 }
@@ -274,7 +274,7 @@ section > h2 {
 .slider-inner {
 	display: flex;
 	gap: var(--gap);
-	padding: 1rem var(--gap);
+	padding: 1rem 5rem;
 	width: fit-content;
 }
 
