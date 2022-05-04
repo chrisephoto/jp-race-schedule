@@ -10,11 +10,11 @@ for (let i = 0; i < seriesList.length; i++) {
 }
 
 // listeners
-window.addEventListener("scroll", carouselOpacity(window.scrollY));
-window.addEventListener("load", loadData);
+window.addEventListener("DOMContentLoaded", init);
 
 // functions
-function loadData() {
+function init() {
+	window.addEventListener("scroll", carouselOpacity(window.scrollY));
   nextEvent();
   createSlider(allEvents,"following");
   for (i = 0; i < seriesList.length; i++) {
