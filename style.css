@@ -222,7 +222,7 @@ main {
 	bottom: 2rem;
 	color: var(--color-text);
 	cursor: pointer;
-	display: flex;
+	display: none;
 	justify-content: center;
 	opacity: 0;
 	position: absolute;
@@ -325,7 +325,7 @@ main {
 	line-height: 1.414;
 }
 
-/* media queries */
+/* medium screens */
 @media only screen and (min-width: 1024px) {
 	:root {
 		--aspect-ratio: 1.77777777777778;
@@ -333,9 +333,18 @@ main {
 	}
 }
 
+/* large  screens */
 @media only screen and (min-width: 1366px) {
 	:root {
 		--aspect-ratio: 1.77777777777778;
 		--card-count: 6; /* how many cards per row */
+	}
+}
+
+/* non-touch devices */
+@media (hover: hover) {
+	.nav-left,
+	.nav-right {
+		display: flex;
 	}
 }
