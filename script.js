@@ -51,7 +51,7 @@ function createSlider(data, opt1, opt2) {
 
   main.appendChild(section);
   section.appendChild(sliderTitle);
-  sliderTitle.appendChild(document.createTextNode(opt1).replace("-", /\s+/g))
+  sliderTitle.appendChild(document.createTextNode(opt1.replace("-", /\s+/g)))
   section.appendChild(sliderOuter);
   sliderOuter.appendChild(sliderMid);
   sliderMid.appendChild(sliderInner);
