@@ -340,13 +340,14 @@ main {
 	:root {
 		--aspect-ratio: 1.77777777777778;
 		--card-count: 4; /* how many cards per row */
+		--gap: 0.5rem;
+		--gutter: 5rem;
 	}
 }
 
 /* large  screens */
 @media only screen and (min-width: 1366px) {
 	:root {
-		--aspect-ratio: 1.77777777777778;
 		--card-count: 6; /* how many cards per row */
 	}
 }
