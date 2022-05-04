@@ -326,7 +326,14 @@ section > h2 {
 }
 
 /* media queries */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 800px) {
+	:root {
+		--aspect-ratio: 1.77777777777778;
+		--card-count: 4; /* how many cards per row */
+	}
+}
+
+@media only screen and (min-width: 1280px) {
 	:root {
 		--aspect-ratio: 1.77777777777778;
 		--card-count: 6; /* how many cards per row */
