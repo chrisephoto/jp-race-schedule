@@ -10,7 +10,7 @@
 	--color-text: #ffffff;
 	--font-family-body: 'Poppins', sans-serif;
 	--font-family-heading: 'Poppins', sans-serif;
-	--gap: 2rem;
+	--gap: 0.5rem;
 	--gutter: 5rem;
 	--transition: 0.2s;
 	--card-count: 6; /* how many cards per row */
