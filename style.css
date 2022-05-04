@@ -223,6 +223,7 @@ section > h2 {
 	/*border-radius: 1000px;*/
 	/*box-shadow: var(--box-shadow);*/
 	color: var(--color-text);
+	cursor: pointer;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
