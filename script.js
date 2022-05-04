@@ -115,24 +115,23 @@ function nextEvent() {
 }
 
 function scrollSlider(id, direction) {
-  d = document.getElementById(id);
-  vw = window.innerWidth;
-  base = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  num = Math.floor(vw / (base * 21.2));
-  scrollOffset = num * base * 21.2;
-  current = parseInt(getComputedStyle(d).left);
-  if (direction == "r") {
-    if (d.getBoundingClientRect().right > vw) {
-      scrollTo = current - scrollOffset;
-      d.style.left = scrollTo + "px";
-    }
-  }
-  if (direction == "l") {
-    if (d.getBoundingClientRect().left < 0) {
-      scrollTo = current + scrollOffset;
-      d.style.left = scrollTo + "px";
-    }
-  }
+	if (direction == "l") {
+		i = -1;
+	}
+	else if (direction == "r") {
+		i = 1;
+	}
+	else {
+		i = 0;
+	}
+	vw = window.innerWidth;
+  count = getComputedStyle(document.querySelector(":root")).getPropertyValue('--card-count');
+  scrollIncrement = vw / count;
+	document.getElementById(id).scrollBy({
+		top: 0,
+		left: scrollIncrement * i,
+		behavior: "smooth"
+	});
 }
 
 function carouselOpacity(sp) {
