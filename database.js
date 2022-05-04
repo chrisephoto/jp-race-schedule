@@ -125,7 +125,7 @@ dataset = [
 				date: "April 9 2022",
 				track: "Fuji",
 				url: "https://superformula.net/sf2/race2022/round1",
-				image: "https://cdn-1.motorsport.com/images/amp/27vJ5Xm0/s1000/32-orc-rookie-corolla-h2-conce.jpg"
+				image: "images/super-formula-fuji.jpg"
 			},
 			{
 				series: "Super Formula",
@@ -133,7 +133,7 @@ dataset = [
 				date: "April 10 2022",
 				track: "Fuji",
 				url: "https://superformula.net/sf2/race2022/round1",
-				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
+				image: "images/super-formula-fuji.jpg"
 			},
 			{
 				series: "Super Formula",
@@ -165,7 +165,7 @@ dataset = [
 				date: "July 16 2022",
 				track: "Fuji",
 				url: "https://superformula.net/sf2/race2022",
-				image: "https://www.dailysportscar.com/wp-content/uploads/2020/05/Team-Lark-McLaren-F1-GTR-2.jpg"
+				image: "images/super-formula-fuji.jpg"
 			},
 			{
 				series: "Super Formula",
