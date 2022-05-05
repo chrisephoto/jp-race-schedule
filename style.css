@@ -81,7 +81,7 @@ header {
 	display: flex;
 	gap: var(--gap);
 	justify-content: flex-end;
-	padding: var(--gap);
+	padding: 2rem;
 	position: relative;
 	z-index: 50;
 }
