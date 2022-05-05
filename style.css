@@ -314,7 +314,7 @@ main {
 
 .slider-inner {
 	display: flex;
-	gap: var(--gap);
+	gap: var(--thumb-space);
 	padding: 1rem var(--gutter) 2rem var(--gutter);
 	width: fit-content;
 }
