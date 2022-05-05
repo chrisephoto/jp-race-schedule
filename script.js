@@ -14,12 +14,6 @@ window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("scroll", function() {
   carouselOpacity(window.scrollY);
 }, false);
-document.getElementById("button-info").addEventListener("click", function() {
-  document.getElementById("dialog-info").open = true;
-}, false);
-document.getElementById("button-settings").addEventListener("click", function() {
-  document.getElementById("dialog-settings").open = true;
-}, false);
 
 
 // functions
@@ -29,6 +23,12 @@ function init() {
   for (i = 0; i < seriesList.length; i++) {
     createSlider(eventList[i]);
   }
+  document.getElementById("button-info").addEventListener("click", function() {
+    document.getElementById("dialog-info").open = true;
+  }, false);
+  document.getElementById("button-settings").addEventListener("click", function() {
+    document.getElementById("dialog-settings").open = true;
+  }, false);
 }
 
 function createSlider(data, opt1, opt2) {
