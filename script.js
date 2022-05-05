@@ -15,10 +15,10 @@ window.addEventListener("scroll", function() {
   carouselOpacity(window.scrollY);
 }, false);
 document.getElementById("button-info").addEventListener("click", function() {
-  console.log("info");
+  document.getElementById("dialog-info").open = true;
 }, false);
 document.getElementById("button-settings").addEventListener("click", function() {
-  console.log("settings");
+  document.getElementById("dialog-settings").open = true;
 }, false);
 
 
