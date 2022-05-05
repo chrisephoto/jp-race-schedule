@@ -221,6 +221,16 @@ main {
 	filter: contrast(0.93) brightness(0.9);
 }
 
+.icon {
+	color: var(--color-text);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.icon:hover {
+	color: var(--color-accent);
+}
+
 .nav-left,
 .nav-right {
 	align-items: center;
