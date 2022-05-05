@@ -68,6 +68,22 @@ body {
 	width: 100%;
 }
 
+dialog {
+	background: var(--color-background);
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow), 0 0 0 100vw rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	left: 50%;
+	margin: 0;
+	padding: var(--gap);
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: min(80vw, 50rem);
+	z-index: 150;
+}
+
 footer {
 	box-sizing: border-box;
 	padding: var(--gap);
