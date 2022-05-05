@@ -300,41 +300,43 @@ main {
 	filter: contrast(0.7) brightness(0.4);
 }
 
+.text-size-xs,
+.text-size-s,
+.text-size-m,
+.text-size-l,
+.text-size-xl,
+.text-size-2xl,
 .text-size-3xl {
-	font-size: 5.657rem;
-	line-height: 1.414;
-}
-
-.text-size-2xl {
-	font-size: 4rem;
-	line-height: 1.414;
-}
-
-.text-size-xl {
-	font-size: 2.828rem;
-	line-height: 1.414;
-}
-
-.text-size-l {
-	font-size: 2rem;
-	line-height: 1.414;
-}
-
-.text-size-m {
-	font-size: 1.414rem;
-	line-height: 1.414;
-}
-
-.text-size-s {
-	font-size: 1rem;
 	line-height: 1.414;
 }
 
 .text-size-xs {
-	font-size: 0.841rem;
-	line-height: 1.414;
+	clamp(0.71rem, -0.38vw + 0.8rem, 0.5rem);
 }
 
+.text-size-s {
+	clamp(0.84rem, -0.24vw + 0.9rem, 0.71rem);
+}
+
+.text-size-m {
+	clamp(1rem, 0vw + 1rem, 1rem);
+}
+
+.text-size-l {
+	clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem);
+}
+
+.text-size-xl {
+	clamp(1.41rem, 1.07vw + 1.15rem, 2rem);
+}
+
+.text-size-2xl {
+	clamp(1.68rem, 2.08vw + 1.16rem, 2.83rem);
+}
+
+.text-size-3xl {
+	clamp(2rem, 3.64vw + 1.09rem, 4rem);
+}
 
 /* ipad screens */
 @media only screen and (min-width: 768px) {
