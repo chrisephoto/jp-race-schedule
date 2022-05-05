@@ -14,6 +14,12 @@ window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("scroll", function() {
   carouselOpacity(window.scrollY);
 }, false);
+document.getElementById("button-info").addEventListener("click", function() {
+  console.log("info");
+}, false);
+document.getElementById("button-settings").addEventListener("click", function() {
+  console.log("settings");
+}, false);
 
 
 // functions
