@@ -12,7 +12,7 @@ for (let i = 0; i < seriesList.length; i++) {
 // listeners
 window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("scroll", function() {
-  carouselOpacity(window.scrollY);
+  heroOpacity(window.scrollY);
 }, false);
 
 
@@ -119,10 +119,10 @@ function createSlider(data, opt1, opt2) {
         }
       }
     }
-    document.getElementById("carousel-header").innerHTML = allEvents[nextEvent].series + " at " + allEvents[nextEvent].track;
-    document.getElementById("carousel-copy").innerHTML = allEvents[nextEvent].date;
-    document.getElementById("carousel-button").href = allEvents[nextEvent].url;
-    document.getElementById("carousel-image").src = allEvents[nextEvent].image;
+    document.getElementById("hero-header").innerHTML = allEvents[nextEvent].series + " at " + allEvents[nextEvent].track;
+    document.getElementById("hero-copy").innerHTML = allEvents[nextEvent].date;
+    document.getElementById("hero-button").href = allEvents[nextEvent].url;
+    document.getElementById("hero-image").src = allEvents[nextEvent].image;
   }
 
   function scrollSlider(id, direction) {
@@ -157,9 +157,9 @@ function createSlider(data, opt1, opt2) {
     }
   }
 
-  function carouselOpacity(sp) {
+  function heroOpacity(sp) {
     vh = window.innerHeight;
     //n = 1 - (2 * sp) / vh; //current position in vh
     n = 1 - (1.4 * sp / vh); //current position in vh
-    document.getElementById("carousel").style.opacity = n;
+    document.getElementById("hero").style.opacity = n;
   }
