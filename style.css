@@ -114,13 +114,11 @@ main {
 	box-sizing: border-box;
 	height: 90vh;
 	overflow: hidden;
-	left: 0;
-	padding-bottom: calc(((1.414 * clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)) + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio))));
-	position: absolute;
-	right: 0;
+	/*padding-bottom: calc(((1.414 * clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)) + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio))));*/
+	position: relative;
 	user-select: none;
-	top: 0;
-	z-index: -50;
+	width: 100%;
+	z-index: -100;
 }
 
 #hero img {
@@ -128,6 +126,10 @@ main {
 	filter: blur(5px) brightness(0.8);
 	height: 100%;
 	object-fit: cover;
+	position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
 	width: 100%;
 	-webkit-mask-image: linear-gradient(to top,
 		hsla(0, 0%, 0%, 0) 0%,
