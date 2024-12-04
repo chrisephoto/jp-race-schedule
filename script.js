@@ -1,7 +1,7 @@
 // option to hide past events
 
 // variables
-timeDifMin = 999999999999999999999999;
+timeDifMin = 1000000000000000000000000;
 const seriesList = [...new Set(dataset.map(item => item.series))].sort();
 const allEvents = dataset.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
 const eventList = []
