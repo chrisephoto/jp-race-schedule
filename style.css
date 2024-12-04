@@ -107,7 +107,7 @@ header {
 }
 
 main {
-	margin-top: calc(((1.414 * clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)) + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio))) - 100vh);
+	margin-top: calc(((((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio)) + 3rem + clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem) - 10vh) * -1);
 }
 
 main section:first-child h2 {
@@ -118,7 +118,6 @@ main section:first-child h2 {
 	box-sizing: border-box;
 	height: 90vh;
 	overflow: hidden;
-	/*padding-bottom: calc(((1.414 * clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)) + 3rem + (((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio))));*/
 	position: relative;
 	user-select: none;
 	width: 100%;
