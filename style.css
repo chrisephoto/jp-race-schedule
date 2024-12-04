@@ -3,7 +3,7 @@
 
 /* variables */
 :root {
-	--aspect-ratio: 0.75;
+	--aspect-ratio: 0.667;
 	--border-radius: 3px;
 	--box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.3);
 	--color-accent: #d82914;
@@ -202,10 +202,6 @@ main {
 	width: calc((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count));
 }
 
-.card:hover {
-	/*transform: scale(1.05);*/
-}
-
 .card > div {
 	align-items: center;
 	display: flex;
@@ -223,15 +219,22 @@ main {
 }
 
 .card > img {
-	filter: contrast(0.85) brightness(0.77);
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 	transition: var(--transition);
 }
 
-.card:hover img {
-	filter: contrast(0.93) brightness(0.9);
+.card.future > img {
+	filter: contrast(0.85) brightness(0.6);
+}
+
+.card.next {
+	width: calc(4 * (100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count));
+}
+
+.card.past {
+	filter: grayscale(1) contrast(0.7) brightness(0.6);
 }
 
 .icon {
@@ -377,7 +380,7 @@ main {
 /* small pc */
 @media only screen and (min-width: 1024px) {
 	:root {
-		--aspect-ratio: 1.77777777777778;
+		--aspect-ratio: 0.667;
 		--card-count: 4; /* how many cards per row */
 		--thumb-space: 0.5rem;
 		--gutter: 5rem;
