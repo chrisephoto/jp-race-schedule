@@ -2,7 +2,7 @@ dataset = [
   {
     series: "Super GT",
     round: "Round 1",
-    date: "Apr 16 2025",
+    date: "Mar 16 2025",
     track: "Okayama",
     url: "https://supergt.net/races/index/2025/Round1/",
     image: "images/super-gt-okayama.jpg"
