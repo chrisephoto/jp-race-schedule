@@ -1,6 +1,9 @@
 dataset = [
   [
     {
+      series: "Super GT"
+    },
+    {
       round: "Round 1",
       date: "Mar 16 2025",
       track: "Okayama",
@@ -59,6 +62,9 @@ dataset = [
   ],
   [
     {
+      series: "Super Taikyu"
+    },
+    {
       round: "Round 1",
       date: "March 19 2025",
       track: "Suzuka",
@@ -109,6 +115,9 @@ dataset = [
     }
   ],
   [
+    {
+      series: "Super Formula"
+    },
     {
       round: "Round 1",
       date: "April 9 2025",
