@@ -18,7 +18,7 @@ window.addEventListener("scroll", function() {
 
 // functions
 function init() {
-  nextEvent();
+  /*nextEvent();*/
   for (i = 0; i < dataset.length; i++) {
     populateFeed(i);
   }
