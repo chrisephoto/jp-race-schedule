@@ -1,5 +1,6 @@
 dataset = [
   [
+    // Super GT
     {
       series: "Super GT"
     },
@@ -61,6 +62,7 @@ dataset = [
     }
   ],
   [
+    // Super Taikyu
     {
       series: "Super Taikyu"
     },
@@ -115,6 +117,7 @@ dataset = [
     }
   ],
   [
+    // Super Formula
     {
       series: "Super Formula"
     },
