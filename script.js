@@ -57,9 +57,9 @@ function populateFeed(i) {
               <img src="${dataset[i].image}">
               <div>
                 <p class="text-size-s">${dataset[i][0].series}</p>
-                <p class="text-size-s">${dataset[i].round}</p>
-                <p class="text-size-s">${dataset[i].date}</p>
-                <p class="text-size-s">${dataset[i].track}</p>
+                <p class="text-size-s">${dataset[i][j].round}</p>
+                <p class="text-size-s">${dataset[i][j].date}</p>
+                <p class="text-size-s">${dataset[i][j].track}</p>
               </div>
             </a>
     `;
