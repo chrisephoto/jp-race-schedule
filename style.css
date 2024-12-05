@@ -121,7 +121,7 @@ main section:first-child h2 {
 	height: 90vh;
 	justify-content: center;
 	overflow: hidden;
-	padding-bottom: calc(((((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio)) + 3rem + clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)));
+	padding-bottom: calc(((((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count)) / var(--aspect-ratio)) + 3rem + (clamp(1.19rem, 0.41vw + 1.09rem, 1.41rem)*1.414)) - 10vh);
 	position: relative;
 	user-select: none;
 	width: 100%;
