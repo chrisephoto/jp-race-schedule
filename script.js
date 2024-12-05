@@ -19,16 +19,65 @@ window.addEventListener("scroll", function() {
 // functions
 function init() {
   nextEvent();
+  for (i = 0; i < dataset.length; i++) {
+    populateFeed(i);
+  }
+  /*
   createSlider(allEvents, "following", "hide");
   for (i = 0; i < seriesList.length; i++) {
     createSlider(eventList[i]);
   }
+  */
   document.getElementById("button-info").addEventListener("click", function() {
     document.getElementById("dialog-info").open = true;
   }, false);
   document.getElementById("button-settings").addEventListener("click", function() {
     document.getElementById("dialog-settings").open = true;
   }, false);
+}
+
+function populateFeed(i) {
+  let html = '';
+  html += `
+    <section>
+      <h2 class="slider-title text-size-l">${dataset[i].[0].series}</h2>
+      <div class="slider-outer">
+        <div class="slider-mid" id="slider-${dataset[i].[0].series}">
+          <div class="slider-inner">
+            <a class="nav-left" onclick="scrollSlider('slider-${dataset[i].[0].series}','l')">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
+              </svg>
+            </a>
+  `;
+  for (let j = 1; j < dataset[i].length - 1; j++) {
+    html += `
+            <a class="card" href="${dataset[i].url}" target="_blank">
+              <img src="${dataset[i].image}">
+              <div>
+                <p class="text-size-s">${dataset[i].[0].series}</p>
+                <p class="text-size-s">${dataset[i].round}</p>
+                <p class="text-size-s">${dataset[i].date}</p>
+                <p class="text-size-s">${dataset[i].track}</p>
+              </div>
+            </a>
+    `;
+  }
+  html += `
+            <a class="nav-right visible" onclick="scrollSlider('slider-${dataset[i].[0].series}','r')">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.75 6.75L19.25 12L13.75 17.25"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H4.75"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+  const target = document.querySelector('main');
+  target.innerHTML += html;
 }
 
 function createSlider(data, opt1, opt2) {
