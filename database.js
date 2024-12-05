@@ -1,5 +1,5 @@
 dataset = [
-  supergt = [
+  [
     {
       round: "Round 1",
       date: "Mar 16 2025",
@@ -57,7 +57,7 @@ dataset = [
       image: "https://www.motoracing-japan.com/circuit/image/motegi.gif"
     }
   ],
-  supertaikyu = [
+  [
     {
       round: "Round 1",
       date: "March 19 2025",
@@ -108,7 +108,7 @@ dataset = [
       image: "https://www.motoracing-japan.com/circuit/image/suzuka.gif"
     }
   ],
-  superformula = [
+  [
     {
       round: "Round 1",
       date: "April 9 2025",
