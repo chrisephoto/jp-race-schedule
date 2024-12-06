@@ -31,9 +31,11 @@ function init() {
   document.getElementById("button-info").addEventListener("click", function() {
     document.getElementById("dialog-info").open = true;
   }, false);
+  /*
   document.getElementById("button-settings").addEventListener("click", function() {
     document.getElementById("dialog-settings").open = true;
   }, false);
+  */
 }
 
 function populateFeed(i) {
