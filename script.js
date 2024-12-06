@@ -1,3 +1,6 @@
+var days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+
 window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("scroll", function() {
   heroOpacity(window.scrollY);
@@ -55,13 +58,22 @@ function populateFeed() {
               </a>
     `;
     for (let j = 0; j < dataset[i].events.length; j++) {
+      // create human readable date
+      dateRaw = new Date(dataset[i].events[j].date);
+      monthRaw = dateRaw.getMonth();
+      monthLong = months[monthRaw];
+      monthShort = monthLong.substr(0, 3);
+      dayRaw = dateRaw.getDay();
+      dayName = days[dayRaw];
+      
       html += `
               <a class="card" href="${dataset[i].events[j]}" target="_blank">
                 <img src="${dataset[i].logo}">
                 <div>
-                  <p class="text-size-s">${dataset[i].series}</p>
                   <p class="text-size-s">${dataset[i].events[j].title}</p>
-                  <p class="text-size-s">${dataset[i].events[j].date}</p>
+                  <p class="text-size-s">${dayName}</p>
+                  <p class="text-size-s">${dayRaw}</p>
+                  <p class="text-size-s">${monthShort}</p>
                   <p class="text-size-s">${dataset[i].events[j].track}</p>
                 </div>
               </a>
