@@ -19,7 +19,7 @@ window.addEventListener("scroll", function() {
 // functions
 function init() {
   /*nextEvent();*/
-  for (i = 0; i < dataset2.length; i++) {
+  for (i = 0; i < dataset.length; i++) {
     populateFeed(i);
   }
   /*
@@ -39,11 +39,11 @@ function init() {
 }
 
 function populateFeed(i) {
-  friendlySeries = dataset2[i].series.replace(/\s+/g, '-').toLowerCase();
+  friendlySeries = dataset[i].series.replace(/\s+/g, '-').toLowerCase();
   let html = '';
   html += `
     <section>
-      <h2 class="slider-title text-size-l">${dataset2[i].series}</h2>
+      <h2 class="slider-title text-size-l">${dataset[i].series}</h2>
       <div class="slider-outer">
         <div class="slider-mid" id="slider-${friendlySeries}">
           <div class="slider-inner">
@@ -54,15 +54,15 @@ function populateFeed(i) {
               </svg>
             </a>
   `;
-  for (let j = 0; j < dataset2[i].events.length; j++) {
+  for (let j = 0; j < dataset[i].events.length; j++) {
     html += `
-            <a class="card" href="${dataset2[i].events[j]}" target="_blank">
-              <img src="${dataset2[i].logo}">
+            <a class="card" href="${dataset[i].events[j]}" target="_blank">
+              <img src="${dataset[i].logo}">
               <div>
-                <p class="text-size-s">${dataset2[i].series}</p>
-                <p class="text-size-s">${dataset2[i].events[j].title}</p>
-                <p class="text-size-s">${dataset2[i].events[j].date}</p>
-                <p class="text-size-s">${dataset2[i].events[j].track}</p>
+                <p class="text-size-s">${dataset[i].series}</p>
+                <p class="text-size-s">${dataset[i].events[j].title}</p>
+                <p class="text-size-s">${dataset[i].events[j].date}</p>
+                <p class="text-size-s">${dataset[i].events[j].track}</p>
               </div>
             </a>
     `;
