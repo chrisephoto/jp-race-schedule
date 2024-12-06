@@ -39,14 +39,15 @@ function init() {
 }
 
 function populateFeed(i) {
+  friendlySeries = dataset2[i].series.replace(/\s+/g, '-').toLowerCase();
   let html = '';
   html += `
     <section>
       <h2 class="slider-title text-size-l">${dataset2[i].series}</h2>
       <div class="slider-outer">
-        <div class="slider-mid" id="slider-${dataset2[i].series}">
+        <div class="slider-mid" id="slider-${friendlySeries}">
           <div class="slider-inner">
-            <a class="nav-left" onclick="scrollSlider('slider-${dataset2[i].series}','l')">
+            <a class="nav-left" onclick="scrollSlider('slider-${friendlySeries}','l')">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
@@ -67,7 +68,7 @@ function populateFeed(i) {
     `;
   }
   html += `
-            <a class="nav-right visible" onclick="scrollSlider('slider-${dataset2[i].series}','r')">
+            <a class="nav-right visible" onclick="scrollSlider('slider-${friendlySeries}','r')">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.75 6.75L19.25 12L13.75 17.25"></path>
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H4.75"></path>
