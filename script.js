@@ -39,7 +39,7 @@ function nextEvent() {
 function populateHero() {
 }
 
-function populateFeed(i) {
+function populateFeed() {
   for (i = 0; i < dataset.length; i++) {
     friendlySeries = dataset[i].series.replace(/\s+/g, '-').toLowerCase();
     let html = '';
