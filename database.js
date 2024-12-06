@@ -1,7 +1,7 @@
 dataset2 = [
   {
     "series": "Super GT",
-    "logo": "images/super-gt.png",
+    "logo": "images/super-gt.jpg",
     "events": [
       {"title": "Round 1", "date": "April 13", "track": "Okayama International Circuit"},
       {"title": "Round 2", "date": "May 4", "track": "Fuji Speedway"},
@@ -15,7 +15,7 @@ dataset2 = [
   },
   {
     "series": "Super Taikyu",
-    "logo": "images/super-taikyu.png",
+    "logo": "images/super-taikyu.jpg",
     "events": [
       {"title": "Round 1", "date": "March 23", "track": "Mobility Resort Motegi"},
       {"title": "Round 2", "date": "April 27", "track": "Suzuka Circuit"},
@@ -28,7 +28,7 @@ dataset2 = [
   },
   {
     "series": "Super Formula",
-    "logo": "images/super-formula.png",
+    "logo": "images/super-formula.jpg",
     "events": [
       {"title": "Round 1", "date": "March 8", "track": "Suzuka Circuit"},
       {"title": "Round 2", "date": "March 9", "track": "Suzuka Circuit"},
