@@ -46,7 +46,9 @@ function populateFeed() {
     let html = '';
     html += `
       <section>
-        <h2 class="slider-title text-size-l">${dataset[i].series}</h2>
+        <h2 class="slider-title text-size-l">
+          <img src="${dataset[i].logo}" alt="${dataset[i].series}" />
+        </h2>
         <div class="slider-outer">
           <div class="slider-mid" id="slider-${friendlySeries}">
             <div class="slider-inner">
