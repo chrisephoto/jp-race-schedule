@@ -25,15 +25,13 @@ function nextEvent() {
 function populateHero() {
   let html = '';
   html += `
-    <div id="hero" style="opacity: 1;">
-      <img id="hero-image" src="${dataset[0].logo}">
-      <div class="hero-text">
-        <p id="hero-title" class="text-size-xl">${dataset[0].events[0].date}</p>
-        <p id="hero-header" class="text-size-3xl">${dataset[0].events[0].title}</p>
-        <p id="hero-copy" class="text-size-xl">${dataset[0].events[0].track}</p>
-        <a id="hero-button" class="button-1 text-size-xs" href="#">See Details</a>
+    <img id="hero-image" src="${dataset[0].logo}">
+    <div class="hero-text">
+      <p id="hero-title" class="text-size-xl">${dataset[0].events[0].date}</p>
+      <p id="hero-header" class="text-size-3xl">${dataset[0].events[0].title}</p>
+      <p id="hero-copy" class="text-size-xl">${dataset[0].events[0].track}</p>
+      <a id="hero-button" class="button-1 text-size-xs" href="#">See Details</a>
       </div>
-    </div>
   `;
   const target = document.getElementById('hero');
   target.innerHTML = html;
