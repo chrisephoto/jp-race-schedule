@@ -18,24 +18,21 @@ window.addEventListener("scroll", function() {
 
 // functions
 function init() {
-  /*nextEvent();*/
+  // id next event
+  nextEvent() ;
+
+  // populate hero 
+  populateHero();
+
+  // populate feed
   for (i = 0; i < dataset.length; i++) {
     populateFeed(i);
   }
-  /*
-  createSlider(allEvents, "following", "hide");
-  for (i = 0; i < seriesList.length; i++) {
-    createSlider(eventList[i]);
-  }
-  */
+
+  // 
   document.getElementById("button-info").addEventListener("click", function() {
     document.getElementById("dialog-info").open = true;
   }, false);
-  /*
-  document.getElementById("button-settings").addEventListener("click", function() {
-    document.getElementById("dialog-settings").open = true;
-  }, false);
-  */
 }
 
 function populateFeed(i) {
@@ -81,6 +78,9 @@ function populateFeed(i) {
   `;
   const target = document.querySelector('main');
   target.innerHTML += html;
+}
+
+function populateHero() {
 }
 
 function createSlider(data, opt1, opt2) {
