@@ -1,22 +1,8 @@
-// option to hide past events
-
-// variables
-timeDifMin = 1000000000000000000000000;
-const seriesList = [...new Set(dataset.map(item => item.series))].sort();
-const allEvents = dataset.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
-const eventList = []
-for (let i = 0; i < seriesList.length; i++) {
-  eventList[i] = dataset.filter(item => item.series == seriesList[i]).sort((a, b) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1);
-}
-
-// listeners
 window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("scroll", function() {
   heroOpacity(window.scrollY);
 }, false);
 
-
-// functions
 function init() {
   // id next event
   nextEvent() ;
@@ -27,7 +13,7 @@ function init() {
   // populate feed
   populateFeed();
 
-  // 
+  // prepare info dialog
   document.getElementById("button-info").addEventListener("click", function() {
     document.getElementById("dialog-info").open = true;
   }, false);
@@ -37,6 +23,20 @@ function nextEvent() {
 }
 
 function populateHero() {
+  let html = '';
+  html += `
+    <div id="hero" style="opacity: 1;">
+      <img id="hero-image" src="${dataset[0].logo}">
+      <div class="hero-text">
+        <p id="hero-title" class="text-size-xl">${dataset[0].events[0].date}</p>
+        <p id="hero-header" class="text-size-3xl">${dataset[0].events[0].title}</p>
+        <p id="hero-copy" class="text-size-xl">${dataset[0].events[0].track}</p>
+        <a id="hero-button" class="button-1 text-size-xs" href="#">See Details</a>
+      </div>
+    </div>
+  `;
+  const target = document.getElementById('hero');
+  target.innerHTML = html;
 }
 
 function populateFeed() {
