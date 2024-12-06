@@ -342,6 +342,10 @@ main section:first-child h2 {
 	text-transform: capitalize;
 }
 
+.slider-title h2 {
+	height: 2rem;
+}
+
 .unavailable {
 	filter: contrast(0.7) brightness(0.4);
 }
