@@ -65,14 +65,15 @@ function populateFeed() {
       monthShort = monthLong.substr(0, 3);
       dayRaw = dateRaw.getDate();
       weekdayRaw = dateRaw.getDay();
-      weekdayName = days[weekdayRaw];
+      weekdayLong = days[weekdayRaw];
+      weekdayShort = weekdayLong.substr(0, 3);
       
       html += `
               <a class="card" href="${dataset[i].events[j]}" target="_blank">
                 <img src="${dataset[i].logo}">
                 <div>
                   <p class="text-size-s">${dataset[i].events[j].title}</p>
-                  <p class="text-size-s">${weekdayName}</p>
+                  <p class="text-size-s">${weekdayShort}</p>
                   <p class="text-size-s">${dayRaw}</p>
                   <p class="text-size-s">${monthShort}</p>
                   <p class="text-size-s">${dataset[i].events[j].track}</p>
