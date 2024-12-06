@@ -25,7 +25,7 @@ function init() {
   populateHero();
 
   // populate feed
-  populateFeed(i);
+  populateFeed();
 
   // 
   document.getElementById("button-info").addEventListener("click", function() {
