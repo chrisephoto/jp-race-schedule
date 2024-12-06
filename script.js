@@ -65,7 +65,7 @@ function populateFeed() {
       monthShort = monthLong.substr(0, 3);
       dayRaw = dateRaw.getDate();
       weekdayRaw = dateRaw.getDay();
-      weekdayName = days[dayRaw];
+      weekdayName = days[weekdayRaw];
       
       html += `
               <a class="card" href="${dataset[i].events[j]}" target="_blank">
