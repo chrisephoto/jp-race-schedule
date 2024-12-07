@@ -108,11 +108,10 @@ function populateFeed() {
               <a class="card${cardClass}" href="${dataset[i].events[j]}" target="_blank">
                 <img src="${dataset[i].events[j].image}">
                 <div>
-                  <p class="text-size-s">${dataset[i].events[j].title}</p>
-                  <p class="text-size-s">${weekdayShort}</p>
-                  <p class="text-size-s">${dayRaw}</p>
-                  <p class="text-size-s">${monthShort}</p>
-                  <p class="text-size-s">${dataset[i].events[j].track}</p>
+                  <p class="card-text-title">${dataset[i].events[j].title}</p>
+                  <p class="card-text-month">${monthShort}</p>
+                  <p class="card-text-day">${dayRaw}</p>
+                  <p class="card-text-track">${dataset[i].events[j].track}</p>
                 </div>
               </a>
       `;
