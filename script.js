@@ -28,10 +28,11 @@ function populateHero() {
   
   for (i = 0; i < dataset.length; i++) {
     for (j = 0; j < dataset[i].events.length; j++) {
+      dateCandidate = new Date(dataset[i].events[j].date);
       // check that date is in the future
-      if (dataset[i].events[j].date > dateCurrent) {
+      if (dateCandidate > dateCurrent) {
         // check that event is before previous candidate 
-        if (dataset[i].events[j].date < dateNext) {
+        if (dateCandidate < dateNext) {
           dateNext = dataset[i].events[j].date;
           dateNextI = i;
           dateNextJ = j;
