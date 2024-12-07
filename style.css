@@ -220,7 +220,7 @@ main section:first-child h2 {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	position: absolute;
 	  top: 0;
 	  right: 0;
