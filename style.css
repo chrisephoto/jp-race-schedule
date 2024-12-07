@@ -406,9 +406,11 @@ main section:first-child h2 {
 
 /* landscape */
 @media only screen and (orientation: landscape) {
+	/*
 	:root {
 		--aspect-ratio: 1.5;
 	}
+	*/
 }
 
 /* non-touch devices */
