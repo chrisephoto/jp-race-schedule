@@ -1,13 +1,5 @@
 dataset = [
   {
-    "series": "Experimental",
-    "logo": "images/logo-super-gt.png",
-    "events": [
-      {"title": "Round 1", "date": "2024-11-28", "track": "Thanksgiving", "image": "images/super-gt-okayama.jpg"},
-      {"title": "Round 2", "date": "2024-12-25", "track": "Christmas", "image": "images/super-gt-fuji.jpg"}
-    ]
-  },
-  {
     "series": "Super GT",
     "logo": "images/logo-super-gt.png",
     "events": [
