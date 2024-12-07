@@ -398,9 +398,7 @@ main section:first-child h2 {
 /* small pc */
 @media only screen and (min-width: 1024px) {
 	:root {
-		--aspect-ratio: 0.667;
 		--card-count: 4; /* how many cards per row */
-		--thumb-space: 0.5rem;
 		--gutter: 5rem;
 	}
 }
@@ -408,7 +406,14 @@ main section:first-child h2 {
 /* pc */
 @media only screen and (min-width: 1366px) {
 	:root {
-		--card-count: 8; /* how many cards per row */
+		--card-count: 6; /* how many cards per row */
+	}
+}
+
+/* landscape */
+@media only screen and (orientation: landscape) {
+	:root {
+		--aspect-ratio: 1.5;
 	}
 }
 
