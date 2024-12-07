@@ -27,7 +27,7 @@ function nextEvent() {
 
 function populateHero() {
   // create human readable date
-  dateRaw = new Date(dataset0i].events[0].date);
+  dateRaw = new Date(dataset[0].events[0].date);
   monthRaw = dateRaw.getMonth();
   monthLong = months[monthRaw];
   monthShort = monthLong.substr(0, 3);
