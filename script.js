@@ -105,7 +105,7 @@ function populateFeed() {
       }
       
       html += `
-              <a class="card${cardClass}" href="${dataset[i].events[j]}" target="_blank">
+              <div class="card${cardClass}">
                 <img src="${dataset[i].events[j].image}">
                 <div>
                   <p class="card-text-title">${dataset[i].events[j].title}</p>
@@ -115,7 +115,7 @@ function populateFeed() {
                   </div>
                   <p class="card-text-track">${dataset[i].events[j].track}</p>
                 </div>
-              </a>
+              </div>
       `;
     }
     html += `
