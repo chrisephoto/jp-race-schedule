@@ -28,7 +28,7 @@ function nextEvent() {
 function populateHero() {
   let html = '';
   html += `
-    <img id="hero-image" src="${dataset[0].logo}">
+    <img id="hero-image" src="${dataset[0].events[0].image}">
     <div class="hero-text">
       <p id="hero-title" class="text-size-xl">${dataset[0].events[0].date}</p>
       <p id="hero-header" class="text-size-3xl">${dataset[0].events[0].title}</p>
@@ -72,7 +72,7 @@ function populateFeed() {
       
       html += `
               <a class="card" href="${dataset[i].events[j]}" target="_blank">
-                <img src="${dataset[i].logo}">
+                <img src="${dataset[i].events[j].image}">
                 <div>
                   <p class="text-size-s">${dataset[i].events[j].title}</p>
                   <p class="text-size-s">${weekdayShort}</p>
