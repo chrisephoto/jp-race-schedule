@@ -33,7 +33,7 @@ function populateHero() {
       if (dateCandidate > dateCurrent) {
         // check that event is before previous candidate 
         if (dateCandidate < dateNext) {
-          dateNext = dataset[i].events[j].date;
+          dateNext = dateCandidate;
           dateNextI = i;
           dateNextJ = j;
         }
