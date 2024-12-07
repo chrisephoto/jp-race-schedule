@@ -109,8 +109,10 @@ function populateFeed() {
                 <img src="${dataset[i].events[j].image}">
                 <div>
                   <p class="card-text-title">${dataset[i].events[j].title}</p>
-                  <p class="card-text-month">${monthShort}</p>
-                  <p class="card-text-day">${dayRaw}</p>
+                  <div>
+                    <p class="card-text-month">${monthShort}</p>
+                    <p class="card-text-day">${dayRaw}</p>
+                  </div>
                   <p class="card-text-track">${dataset[i].events[j].track}</p>
                 </div>
               </a>
