@@ -59,7 +59,7 @@ function populateHero() {
       <p id="hero-title" class="text-size-xl">${weekdayLong} ${monthLong} ${dayRaw}</p>
       <p id="hero-header" class="text-size-3xl">${dataset[dateNextI].series}</p>
       <p id="hero-copy" class="text-size-xl">${dataset[dateNextI].events[dateNextJ].track}</p>
-      </div>
+    </div>
   `;
   const target = document.getElementById('hero');
   target.innerHTML = html;
