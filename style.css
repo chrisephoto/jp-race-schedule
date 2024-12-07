@@ -212,6 +212,7 @@ main section:first-child h2 {
 	position: relative;
 	scroll-snap-align: start;
 	scroll-margin: var(--gutter);
+	text-align: center;
 	transition: var(--transition);
 	width: calc((100vw - (2 * var(--gutter)) - ((var(--card-count) - 1) * var(--thumb-space))) / var(--card-count));
 }
@@ -235,13 +236,12 @@ main section:first-child h2 {
 }
 
 .card > div .card-text-day {
-	font-size: 3rem;
-	font-weight: bold;
+	font-size: 5rem;
 	line-height: 1;
 }
 
 .card > div .card-text-month {
-	font-size: 1.5rem;
+	font-size: 2.8rem;
 	font-weight: bold;
 	line-height: 1;
 	text-transform: uppercase;
