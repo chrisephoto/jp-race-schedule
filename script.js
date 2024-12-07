@@ -55,7 +55,7 @@ function populateHero() {
   html += `
     <img id="hero-image" src="${dataset[dateNextI].events[dateNextJ].image}">
     <div class="hero-text">
-      <p class="text-size-s">Next Event</p>
+      <p class="text-size-m">Next Event</p>
       <p id="hero-title" class="text-size-xl">${weekdayLong} ${monthLong} ${dayRaw}</p>
       <p id="hero-header" class="text-size-3xl">${dataset[dateNextI].series}</p>
       <p id="hero-copy" class="text-size-xl">${dataset[dateNextI].events[dateNextJ].track}</p>
