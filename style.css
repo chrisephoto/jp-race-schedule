@@ -221,6 +221,7 @@ main section:first-child h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	padding: 2ch;
 	position: absolute;
 	  top: 0;
 	  right: 0;
@@ -231,6 +232,29 @@ main section:first-child h2 {
 .card > div p {
 	margin: 0;
 	text-shadow: 0 1px 2px black, 0px 1px 8px black
+}
+
+.card > div .card-text-day {
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.card > div .card-text-month {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.card > div .card-text-title {
+	font-size: 1rem;
+	line-height: 1;
+}
+
+.card > div .card-text-track {
+	font-size: 1rem;
+	line-height: 1;
 }
 
 .card > img {
