@@ -100,9 +100,8 @@ function populateFeed() {
 
       // assign class for cards
       cardClass = "";
-        if (dateRaw < dateCurrent) {
-          cardClass = " inactive";
-        }
+      if (dateRaw < dateCurrent) {
+        cardClass = " inactive";
       }
       
       html += `
