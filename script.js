@@ -26,12 +26,22 @@ function nextEvent() {
 }
 
 function populateHero() {
+  // create human readable date
+  dateRaw = new Date(dataset0i].events[0].date);
+  monthRaw = dateRaw.getMonth();
+  monthLong = months[monthRaw];
+  monthShort = monthLong.substr(0, 3);
+  dayRaw = dateRaw.getDate();
+  weekdayRaw = dateRaw.getDay();
+  weekdayLong = days[weekdayRaw];
+  weekdayShort = weekdayLong.substr(0, 3);
+  
   let html = '';
   html += `
     <img id="hero-image" src="${dataset[0].events[0].image}">
     <div class="hero-text">
-      <p id="hero-title" class="text-size-xl">${dataset[0].events[0].date}</p>
-      <p id="hero-header" class="text-size-3xl">${dataset[0].events[0].title}</p>
+      <p id="hero-title" class="text-size-xl">${weekdayLong} ${monthLong} ${dayRaw}</p>
+      <p id="hero-header" class="text-size-3xl">${dataset[0].series}</p>
       <p id="hero-copy" class="text-size-xl">${dataset[0].events[0].track}</p>
       <a id="hero-button" class="button-1 text-size-xs" href="#">See Details</a>
       </div>
