@@ -7,9 +7,6 @@ window.addEventListener("scroll", function() {
 }, false);
 
 function init() {
-  // id next event
-  nextEvent() ;
-
   // populate hero 
   populateHero();
 
@@ -22,12 +19,29 @@ function init() {
   }, false);
 }
 
-function nextEvent() {
-}
-
 function populateHero() {
+  dateCurrent = new Date();
+  dateNext = new Date();
+  dateNext.setFullYear(3000);
+  dateNextI = 0;
+  dateNextJ = 0;
+  
+  for (i = 0; i < dataset.length; i++) {
+    for (j = 0; j < dataset[i].events.length; j++) {
+      // check that date is in the future
+      if (dataset[i].events[j].date > dateCurrent) {
+        // check that event is before previous candidate 
+        if (dataset[i].events[j].date < dateNext) {
+          dateNext = dataset[i].events[j].date;
+          dateNextI = i;
+          dateNextJ = j;
+        }
+      }
+    }
+  }
+  
   // create human readable date
-  dateRaw = new Date(dataset[0].events[0].date);
+  dateRaw = new Date(dataset[dateNextI].events[dateNextJ].date);
   monthRaw = dateRaw.getMonth();
   monthLong = months[monthRaw];
   monthShort = monthLong.substr(0, 3);
@@ -38,11 +52,11 @@ function populateHero() {
   
   let html = '';
   html += `
-    <img id="hero-image" src="${dataset[0].events[0].image}">
+    <img id="hero-image" src="${dataset[dateNextI].events[dateNextJ].image}">
     <div class="hero-text">
       <p id="hero-title" class="text-size-xl">${weekdayLong} ${monthLong} ${dayRaw}</p>
-      <p id="hero-header" class="text-size-3xl">${dataset[0].series}</p>
-      <p id="hero-copy" class="text-size-xl">${dataset[0].events[0].track}</p>
+      <p id="hero-header" class="text-size-3xl">${dataset[dateNextI].series}</p>
+      <p id="hero-copy" class="text-size-xl">${dataset[dateNextI].events[dateNextJ].track}</p>
       <a id="hero-button" class="button-1 text-size-xs" href="#">See Details</a>
       </div>
   `;
