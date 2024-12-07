@@ -229,7 +229,8 @@ main section:first-child h2 {
 }
 
 .card > div p {
-  margin: 0;
+	margin: 0;
+	text-shadow: 0 1px 2px black, 0px 1px 8px black
 }
 
 .card > img {
