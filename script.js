@@ -46,7 +46,7 @@ function populateHero() {
   monthRaw = dateRaw.getMonth();
   monthLong = months[monthRaw];
   monthShort = monthLong.substr(0, 3);
-  dayRaw = dateRaw.getDate();
+  dayRaw = dateRaw.getDate() + 1;
   weekdayRaw = dateRaw.getDay();
   weekdayLong = days[weekdayRaw];
   weekdayShort = weekdayLong.substr(0, 3);
@@ -66,6 +66,8 @@ function populateHero() {
 }
 
 function populateFeed() {
+  dateCurrent = new Date;
+
   for (i = 0; i < dataset.length; i++) {
     friendlySeries = dataset[i].series.replace(/\s+/g, '-').toLowerCase();
     let html = '';
@@ -84,19 +86,27 @@ function populateFeed() {
                 </svg>
               </a>
     `;
+    
     for (let j = 0; j < dataset[i].events.length; j++) {
       // create human readable date
       dateRaw = new Date(dataset[i].events[j].date);
       monthRaw = dateRaw.getMonth();
       monthLong = months[monthRaw];
       monthShort = monthLong.substr(0, 3);
-      dayRaw = dateRaw.getDate();
+      dayRaw = dateRaw.getDate() + 1;
       weekdayRaw = dateRaw.getDay();
       weekdayLong = days[weekdayRaw];
       weekdayShort = weekdayLong.substr(0, 3);
+
+      // assign class for cards
+      cardClass = "";
+        if (dateRaw < dateCurrent) {
+          cardClass = " inactive";
+        }
+      }
       
       html += `
-              <a class="card" href="${dataset[i].events[j]}" target="_blank">
+              <a class="card${cardClass}" href="${dataset[i].events[j]}" target="_blank">
                 <img src="${dataset[i].events[j].image}">
                 <div>
                   <p class="text-size-s">${dataset[i].events[j].title}</p>
