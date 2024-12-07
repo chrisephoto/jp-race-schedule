@@ -234,7 +234,7 @@ main section:first-child h2 {
 }
 
 .card > img {
-	filter: contrast(0.85) brightness(0.6);
+	filter: contrast(0.9) brightness(0.8);
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
