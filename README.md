@@ -9,15 +9,15 @@ A quick site thrown together to help me track upcoming races in various Japanese
 ## Changelog
 **TBD**
 * Add more series:
-* * All Japan Rally Championship
-* * D1GP
-* * D1 Lights
-* * F4 Japanese Championship
-* * Formula Beat
-* * Formula Regional Japanese Championship
-* * Japan Cup Series
-* * Super Formula Lights
-* * TCR Japan Touring Car Series
+ * All Japan Rally Championship
+ * D1GP
+ * D1 Lights
+ * F4 Japanese Championship
+ * Formula Beat
+ * Formula Regional Japanese Championship
+ * Japan Cup Series
+ * Super Formula Lights
+ * TCR Japan Touring Car Series
 
 **2024-12-08**
 * Site framework updated
