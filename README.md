@@ -6,8 +6,8 @@ A quick site thrown together to help me track upcoming races in various Japanese
 
 [View the live site](https://chrisephoto.github.io/jp-race-schedule/)
 
-## Changelog
-**TBD**
+## Future Improvements
+
 * Add more series:
   * All Japan Rally Championship
   * D1GP
@@ -18,6 +18,8 @@ A quick site thrown together to help me track upcoming races in various Japanese
   * Japan Cup Series
   * Super Formula Lights
   * TCR Japan Touring Car Series
+
+## Changelog
 
 **2024-12-08**
 * Site framework updated
