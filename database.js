@@ -19,7 +19,7 @@ dataset = [
     "events": [
       {"title": "Round 1", "date": "2025-03-23", "track": "Mobility Resort Motegi", "image": "images/super-taikyu-motegi.jpg"},
       {"title": "Round 2", "date": "2025-04-27", "track": "Suzuka Circuit", "image": "images/super-taikyu-suzuka.jpg"},
-      {"title": "Round 3", "date": "2025-06-01", "track": "Fuji Speedway", "image": "images/super-taikyu-fuji.jpg"},
+      {"title": "Round 3", "date": "2025-06-01T00:00:00", "track": "Fuji Speedway", "image": "images/super-taikyu-fuji.jpg"},
       {"title": "Round 4", "date": "2025-07-06", "track": "Sportsland Sugo", "image": "images/super-taikyu-sugo.jpg"},
       {"title": "Round 5", "date": "2025-07-27", "track": "Autopolis", "image": "images/super-taikyu-autopolis.jpg"},
       {"title": "Round 6", "date": "2025-10-26", "track": "Okayama International Circuit", "image": "images/super-taikyu-okayama.jpg"},
