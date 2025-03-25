@@ -93,7 +93,7 @@ function populateFeed() {
       monthRaw = dateRaw.getMonth();
       monthLong = months[monthRaw];
       monthShort = monthLong.substr(0, 3);
-      dayRaw = dateRaw.getDate() + 1;
+      dayRaw = dateRaw.getDate();
       weekdayRaw = dateRaw.getDay();
       weekdayLong = days[weekdayRaw];
       weekdayShort = weekdayLong.substr(0, 3);
