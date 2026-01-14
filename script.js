@@ -351,7 +351,7 @@ function updateFavorites() {
     favoritesArray = [];
     favoritesList = "favorites=";
   }
-  document.cookie = favoritesList;
+  document.cookie = favoritesList + "; max-age=31536000;";
   populateFavorites();
   populateHero();
 }
