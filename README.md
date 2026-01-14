@@ -9,17 +9,28 @@ A quick site thrown together to help me track upcoming races in various Japanese
 ## Future Improvements
 
 * Add more series:
-  * All Japan Rally Championship
-  * D1GP
-  * D1 Lights
-  * F4 Japanese Championship
-  * Formula Beat
-  * Formula Regional Japanese Championship
-  * Japan Cup Series
-  * Super Formula Lights
-  * TCR Japan Touring Car Series
+  * [Gymkhana](https://motorsports.jaf.or.jp/calendar/2026/gymkhana/jgc)
+  * [Dirt](https://motorsports.jaf.or.jp/calendar/2026/dirt-trial/jdc)
+  * [Kart](https://motorsports.jaf.or.jp/calendar/2025/kart/jkc)
 
 ## Changelog
+
+**2026-01-13**
+#### Massive Update
+* Added new series:
+  * All Japan Rally Championship
+  * D1 Grand Prix
+  * D1 Lights
+  * Formula Beat
+  * Formula Regional Japanese Championship
+  * Kyojo Cup
+  * Japan Cup
+  * Super Formula Lights
+* Added 2026 schedule:
+  * Super Formula
+  * Super GT
+  * Super Taikyu
+* Added ability to favorite series to have them show at the top of the page
 
 **2024-12-08**
 * Site framework updated
