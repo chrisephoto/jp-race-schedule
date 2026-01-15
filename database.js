@@ -113,13 +113,6 @@ dataset = [
     ]
   },
   {
-    "series": "Super FJ",
-    "url": "https://www.jss-org.com/",
-    "logo": "images/logo-super-fj.png",
-    "events": [
-    ]
-  },
-  {
     "series": "Super Formula",
     "url": "https://superformula.net/",
     "logo": "images/logo-super-formula.png",

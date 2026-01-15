@@ -111,7 +111,7 @@ function populateFavorites() {
   // create slider for custom series
   let html = "";
   html += `
-    <h2 class="slider-title text-size-l">
+    <h2 class="slider-title text-size-l shadow">
       <a href="" target="_blank">
         Following
       </a>
@@ -154,13 +154,13 @@ function populateFavorites() {
           <div>
             <div>
               <img src="${allEvents[i].logo}" alt="${allEvents[i].series}" />
-              <p class="card-text-track">${allEvents[i].title}</p>
+              <p class="card-text-track text-size-m">${allEvents[i].title}</p>
             </div>
             <div>
-              <p class="card-text-month">${monthShort}</p>
-              <p class="card-text-day">${dayRaw}</p>
+              <p class="card-text-month text-size-2xl bold">${monthShort}</p>
+              <p class="card-text-day text-size-4xl">${dayRaw}</p>
             </div>
-            <p class="card-text-track">${allEvents[i].track}</p>
+            <p class="card-text-track text-size-m">${allEvents[i].track}</p>
           </div>
         </div>
     `
@@ -192,7 +192,7 @@ function populateFeed() {
       let html = "";
       html += `
         <section>
-          <h2 class="slider-title text-size-l">
+          <h2 class="slider-title text-size-l shadow">
             <a href="${dataset[i].url}" target="_blank">
               ${dataset[i].series}
             </a>
@@ -232,14 +232,14 @@ function populateFeed() {
 
                     <div>
                       <img src="${dataset[i].events[j].logo}" alt="${dataset[i].events[j].series}" />
-                      <p class="card-text-track">${dataset[i].events[j].title}</p>
+                      <p class="card-text-track text-size-m">${dataset[i].events[j].title}</p>
                     </div>
 
                     <div>
-                      <p class="card-text-month">${monthShort}</p>
-                      <p class="card-text-day">${dayRaw}</p>
+                      <p class="card-text-month text-size-2xl bold">${monthShort}</p>
+                      <p class="card-text-day text-size-4xl">${dayRaw}</p>
                     </div>
-                    <p class="card-text-track">${dataset[i].events[j].track}</p>
+                    <p class="card-text-track text-size-m">${dataset[i].events[j].track}</p>
                   </div>
                 </div>
         `;
@@ -285,15 +285,52 @@ function populateHero() {
   weekdayRaw = dateRaw.getDay();
   weekdayLong = days[weekdayRaw];
   weekdayShort = weekdayLong.substr(0, 3);
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = dateRaw - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown-d").innerHTML = days;
+  document.getElementById("countdown-h").innerHTML = hours.toString().padStart(2, "0");
+  document.getElementById("countdown-m").innerHTML = minutes.toString().padStart(2, "0");
+  document.getElementById("countdown-s").innerHTML = seconds.toString().padStart(2, "0");
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+  }
+}, 1000);
+
   
   let html = "";
   html += `
     <img id="hero-image" src="${allEvents[j].image}">
     <div class="hero-text">
-      <p class="text-size-m">Next Event</p>
-      <p id="hero-title" class="text-size-xl">${weekdayLong} ${monthLong} ${dayRaw}</p>
-      <p id="hero-header" class="text-size-3xl">${allEvents[j].series}</p>
-      <p id="hero-copy" class="text-size-xl">${allEvents[j].track}</p>
+      <p id="hero-header" class="text-size-2xl bold">${allEvents[j].series}</p>
+      <p id="hero-copy" class="text-size-xl bold">${allEvents[j].title}: ${allEvents[j].track}</p>
+      <div id="countdown">
+        <p class="text-size-xl bold" id="countdown-d">00</p>
+        <p class="text-size-xl bold" id="countdown-h">00</p>
+        <p class="text-size-xl bold" id="countdown-m">00</p>
+        <p class="text-size-xl bold" id="countdown-s">00</p>
+        <p class="text-size-xs">Days</p>
+        <p class="text-size-xs">Hours</p>
+        <p class="text-size-xs">Minutes</p>
+        <p class="text-size-xs">Seconds</p>
+      </div>
+      <p id="hero-title" class="text-size-l bold">${weekdayLong} ${monthLong} ${dayRaw}</p>
     </div>
   `;
   const target = document.getElementById("hero");
