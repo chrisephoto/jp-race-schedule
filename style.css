@@ -258,9 +258,11 @@ main section:first-child h2 {
 
 .card > div img {
 	height: 2rem;
-	margin-bottom: 0.5rem;
 	-webkit-filter: drop-shadow(0 1px 2px black) drop-shadow(0 1px 8px black);
   	filter: drop-shadow(0 1px 2px black) drop-shadow(0 1px 8px black);
+	margin-bottom: 0.5rem;
+	object-fit: contain;
+	max-width: 100%;
 }
 
 .card > div p {
@@ -466,6 +468,13 @@ main section:first-child h2 {
 @media only screen and (min-width: 1366px) {
 	:root {
 		--card-count: 6; /* how many cards per row */
+	}
+}
+
+/* big pc */
+@media only screen and (min-width: 1920px) {
+	:root {
+		--card-count: 8; /* how many cards per row */
 	}
 }
 
