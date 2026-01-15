@@ -142,27 +142,29 @@ function populateFavorites() {
       // assign class for cards
       cardClass = "";
       if (favoritesArray.includes(allEvents[i].series)) {
-        cardClass = " hidden";
+        cardClass = "hidden";
       }
       if (dateRaw < dateCurrent) {
-        cardClass = " hidden";
+        cardClass = "hidden";
       }
 
       html += `
-        <div class="card${cardClass}">
-            <img src="${allEvents[i].image}">
-          <div>
+        <a href="${allEvents[i].url}" target="_blank" class="${cardClass}">
+          <div class="card">
+              <img src="${allEvents[i].image}">
             <div>
-              <img src="${allEvents[i].logo}" alt="${allEvents[i].series}" />
-              <p class="card-text-track text-size-m">${allEvents[i].title}</p>
+              <div>
+                <img src="${allEvents[i].logo}" alt="${allEvents[i].series}" />
+                <p class="card-text-track text-size-m">${allEvents[i].title}</p>
+              </div>
+              <div>
+                <p class="card-text-month text-size-2xl bold">${monthShort}</p>
+                <p class="card-text-day text-size-4xl">${dayRaw}</p>
+              </div>
+              <p class="card-text-track text-size-m">${allEvents[i].track}</p>
             </div>
-            <div>
-              <p class="card-text-month text-size-2xl bold">${monthShort}</p>
-              <p class="card-text-day text-size-4xl">${dayRaw}</p>
-            </div>
-            <p class="card-text-track text-size-m">${allEvents[i].track}</p>
           </div>
-        </div>
+        </a>
     `
   }
 
@@ -226,22 +228,24 @@ function populateFeed() {
         }
         
         html += `
-                <div class="card${cardClass}">
-                  <img src="${dataset[i].events[j].image}">
-                  <div>
-
+                <a href="${dataset[i].url}" target="_blank">
+                  <div class="card${cardClass}">
+                    <img src="${dataset[i].events[j].image}">
                     <div>
-                      <img src="${dataset[i].events[j].logo}" alt="${dataset[i].events[j].series}" />
-                      <p class="card-text-track text-size-m">${dataset[i].events[j].title}</p>
-                    </div>
 
-                    <div>
-                      <p class="card-text-month text-size-2xl bold">${monthShort}</p>
-                      <p class="card-text-day text-size-4xl">${dayRaw}</p>
+                      <div>
+                        <img src="${dataset[i].events[j].logo}" alt="${dataset[i].events[j].series}" />
+                        <p class="card-text-track text-size-m">${dataset[i].events[j].title}</p>
+                      </div>
+
+                      <div>
+                        <p class="card-text-month text-size-2xl bold">${monthShort}</p>
+                        <p class="card-text-day text-size-4xl">${dayRaw}</p>
+                      </div>
+                      <p class="card-text-track text-size-m">${dataset[i].events[j].track}</p>
                     </div>
-                    <p class="card-text-track text-size-m">${dataset[i].events[j].track}</p>
                   </div>
-                </div>
+                </a>
         `;
       }
       html += `

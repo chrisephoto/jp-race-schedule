@@ -240,7 +240,7 @@ main section:first-child h2 {
 }
 
 .card:hover {
-	/*transform: translateY(-0.5rem);*/
+	transform: translateY(-0.5rem);
 }
 
 .card > div {
